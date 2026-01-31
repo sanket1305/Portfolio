@@ -102,17 +102,17 @@ const ContactForm = (): JSX.Element => {
               <div className="single_address">
                 <i className="fa fa-map-marker"></i>
                 <h4 style={{ fontFamily: "aveneir next" }}>Address</h4>
-                <p style={{ fontFamily: "aveneir next" }}>Mountain View, California</p>
+                <p style={{ fontFamily: "aveneir next" }}>Gainesville, Florida</p>
               </div>
               <div className="single_address">
                 <i className="fa fa-envelope"></i>
                 <h4 style={{ fontFamily: "aveneir next" }}>Send your message</h4>
-                <p style={{ fontFamily: "aveneir next" }}>vamsipachamatla79@gmail.com</p>
+                <p style={{ fontFamily: "aveneir next" }}>meetsanket24@gmail.com</p>
               </div>
               <div className="single_address">
                 <i className="fa fa-phone"></i>
                 <h4 style={{ fontFamily: "aveneir next" }}>Call me on</h4>
-                <p style={{ fontFamily: "aveneir next" }}>(+1) 352 554 8435</p>
+                <p style={{ fontFamily: "aveneir next" }}>(+1) 352 6829774</p>
               </div>
             </div>
           </Row>

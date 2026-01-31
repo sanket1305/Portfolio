@@ -38,23 +38,23 @@ function Home(): JSX.Element {
         <Row>
           <Col md={7}>
             <h2 className='headtext' style={{ fontFamily: "aveneir next" }}>Hello <span className='wave'>👋 </span></h2>
-            <h2 className='nametext' style={{ fontFamily: "aveneir next" }}>I'm Vamsi Pachamatla</h2>
+            <h2 className='nametext' style={{ fontFamily: "aveneir next" }}>I'm Sanket Deshmukh</h2>
             <span></span>
             <Text />
             <button onClick={() => {
-              window.open("https://github.com/vamsi3379")
+              window.open("https://github.com/sanket1305")
             }}
               className='socailmediabtn'><AiFillGithub className='icon' /></button>
             <button onClick={() => {
-              window.open("https://www.linkedin.com/in/vamsipachamatla/")
+              window.open("https://www.linkedin.com/in/deshmukhsanket/")
             }}
               className='socailmediabtn'><FaLinkedinIn className='icon' /></button>
-            <button onClick={() => {
-              window.open("https://instagram.com/vamsi_pachamatla?igshid=YmMyMTA2M2Y=")
+            {/* <button onClick={() => {
+              window.open("https://instagram.com/sanket_deshmukh10")
             }}
-              className='socailmediabtn'><AiFillInstagram className='icon' /></button>
+              className='socailmediabtn'><AiFillInstagram className='icon' /></button> */}
             <button onClick={() => {
-              window.open("https://leetcode.com/VamsiPachamatla/")
+              window.open("https://leetcode.com/deshmukhsanket/")
             }}
               className='socailmediabtn'><SiLeetcode className='icon' /></button>
           </Col>

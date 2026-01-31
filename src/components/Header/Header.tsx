@@ -83,7 +83,7 @@ function Header(): JSX.Element {
       >
         <Navbar.Brand className='logotext'>
           <div className='navbar-toggle'>
-            <h5 style={{ color: "#4158d0" }}>Vamsi</h5>
+            <h5 style={{ color: "#4158d0" }}></h5>  {/* you can put your name here */}
           </div>
         </Navbar.Brand>
 
