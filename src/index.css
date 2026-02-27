@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Match the overscroll / rubber-band gutter colour to the active theme.
+     Without this the browser exposes the bare html/body background (white)
+     when the user pulls past the top or bottom of the page on mobile. */
+  html {
+    scroll-behavior: smooth;
+    background-color: #ffffff; /* light mode — same as bg-white */
+  }
+
+  html.dark {
+    background-color: #030712; /* dark mode  — same as bg-gray-950 */
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    margin: 0;
+    background-color: inherit; /* picks up html's colour so the gutter stays consistent */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom scrollbar — desktop only */
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(34, 211, 238, 0.27);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(34, 211, 238, 0.53);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #22d3ee, #6366f1, #22d3ee);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientX 4s ease infinite;
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+}

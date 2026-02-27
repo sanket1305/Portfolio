@@ -1,0 +1,474 @@
+{
+  "personal": {
+    "name": "Sanket Deshmukh",
+    "title": "Data Engineer & Agentic AI Engineer",
+    "roles": [
+      "Data Engineer",
+      "Agentic AI Engineer",
+      "ML Engineer",
+      "Backend Engineer",
+      "Problem Solver"
+    ],
+    "bio": "Data Engineer and Agentic AI practitioner with 3+ years of industry experience building large-scale ETL pipelines and distributed data systems for global banking clients. Skilled in Apache Spark, Spring Boot, and LLM-driven workflow automation. Currently pursuing an MS in Computer Science at the University of Florida and building agentic AI solutions to automate enterprise processes.",
+    "email": "meetsanket24@gmail.com",
+    "location": "FL, United States",
+    "github": "https://github.com/sanket1305",
+    "linkedin": "https://linkedin.com/in/deshmukh-sanket",
+    "twitter": "https://twitter.com/deshmukhsankett",
+    "resume": "https://drive.google.com/file/d/1EpidHsMcctQBgEUW6VsYQ4cSYGuQhjeo/view?usp=sharing"
+  },
+
+  "workExperience": [
+    {
+      "id": 1,
+      "company": "UFIT — University of Florida",
+      "role": "Agentic AI Intern",
+      "duration": "January 2026 – Present",
+      "location": "Gainesville, FL",
+      "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
+      "bullets": [
+        "Automated manual campus service workflows using agentic AI and LLM-based agents, reducing repetitive support effort for enterprise systems",
+        "Designed and evaluated prompt-driven Python workflows, improving response accuracy and reliability across thousands of student and faculty interactions",
+        "Developed NaviGator AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%"
+      ],
+      "tech": ["Python", "LLMs", "n8n", "Langflow", "Prompt Engineering"]
+    },
+    {
+      "id": 2,
+      "company": "LTIMindtree",
+      "role": "Senior Data Engineer",
+      "duration": "July 2021 – July 2024",
+      "location": "Mumbai, India",
+      "description": "Designed and maintained production-grade ETL pipelines and data platforms for a global banking client with 5M+ users.",
+      "bullets": [
+        "Designed and implemented 15+ ETL pipelines using Java, Apache Spark, and Spring Boot, processing 1M+ records daily from CSV, binary, and streaming sources across customer holdings, transactions, and forex rates",
+        "Migrated legacy Beeline/Hive jobs to Spark, achieving ~45% faster execution across complex multi-account banking data flows",
+        "Built Spark modules for the MiFID II-compliant Cost and Charges (CnC) platform, computing per-customer investment costs and reducing manual audit intervention",
+        "Architected data archiving and partitioning strategies to improve query performance by 60%, supporting regulated data retention and historical lookups",
+        "Streamlined CI/CD using Jenkins, Nexus, and Bitbucket with automated regression tests, cutting post-release defects by 70%",
+        "Integrated Swagger-documented Spring Boot RESTful APIs using Dependency Injection and Factory patterns, accelerating frontend integration by 40%"
+      ],
+      "tech": [
+        "Java",
+        "Apache Spark",
+        "Spring Boot",
+        "Hive",
+        "React.js",
+        "Jenkins",
+        "Docker",
+        "Maven",
+        "CI/CD",
+        "Swagger"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Sequelstring Pvt Ltd",
+      "role": "Blockchain Developer Intern",
+      "duration": "2020",
+      "location": "India",
+      "description": "Built a blockchain-based multi-party contract management system with end-to-end encryption and decentralized storage.",
+      "bullets": [
+        "Developed a web-based blockchain application enabling up to 5 parties to securely share, sign, and verify contracts using decentralized logic",
+        "Authored and deployed 4+ Solidity smart contracts on the Rinkeby Testnet via Web3.js and Node.js, supporting pilot runs with 10+ test users",
+        "Applied AES-256 and RSA-2048 encryption to secure access keys and contract documents; stored 20+ signed contracts on IPFS for tamper resistance",
+        "Used Truffle and Ganache for local contract testing, cutting testnet debugging time by 40%"
+      ],
+      "tech": [
+        "Solidity",
+        "Web3.js",
+        "Node.js",
+        "IPFS",
+        "AES-256",
+        "RSA-2048",
+        "Truffle",
+        "Ganache"
+      ]
+    },
+    {
+      "id": 4,
+      "company": "CSI-DBIT",
+      "role": "Android App Developer Intern",
+      "duration": "2019 – 2020",
+      "location": "Mumbai, India",
+      "description": "Built a native Android app to digitize event management and internal operations for the CSI student chapter.",
+      "bullets": [
+        "Developed a native Android application for CSI-DBIT, digitizing event management workflows and driving a 40% increase in student participation",
+        "Built task schedulers, attendance tracking, and role-based access modules using Android SDK and MVC architecture",
+        "Integrated Firebase Cloud Messaging (FCM) for push notifications; used SQLite for offline-first local data persistence"
+      ],
+      "tech": [
+        "Android SDK",
+        "Java",
+        "Firebase",
+        "Firebase Cloud Messaging",
+        "SQLite",
+        "MVC"
+      ]
+    }
+  ],
+
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of Florida",
+      "degree": "Master of Science",
+      "field": "Computer Science",
+      "duration": "Aug 2024 – May 2026",
+      "gpa": "3.92 / 4.0",
+      "highlights": [
+        "Participation in Hacklytics (2026), organized by Georgia Tech",
+        "Contributed 1.5 years at UF Recreation and Wellness"
+      ]
+    },
+    {
+      "id": 2,
+      "institution": "University of Mumbai",
+      "degree": "Bachelor of Engineering",
+      "field": "Information Technology",
+      "duration": "2017 – 2021",
+      "gpa": "3.63 / 4.0",
+      "highlights": [
+        "1st Prize at Smart India Hackathon 2020, organized by Ministry of Education, Govt. of India",
+        "Training & Placement Coordinator (2020 – 2021)",
+        "Technical Head of CSI-DBIT (2019 – 2020)"
+      ]
+    }
+  ],
+
+  "skills": {
+    "Languages": ["Python", "Java", "Go", "JavaScript", "SQL", "Solidity"],
+    "AI / ML & NLP": [
+      "Scikit-learn",
+      "XGBoost",
+      "Random Forest",
+      "HDBSCAN",
+      "RAG (FAISS)",
+      "LoRA Fine-Tuning",
+      "Sentence Transformers",
+      "XLM-Roberta",
+      "VADER",
+      "LangChain"
+    ],
+    "Data Engineering": [
+      "Apache Spark",
+      "Hive",
+      "ETL Pipelines",
+      "Data Partitioning",
+      "Data Quality",
+      "Distributed Systems"
+    ],
+    "Frameworks & Libraries": [
+      "Spring Boot",
+      "React.js",
+      "AngularJS",
+      "Node.js",
+      "Pandas",
+      "Plotly",
+      "Streamlit",
+      "Web3.js"
+    ],
+    "Databases & Storage": [
+      "PostgreSQL",
+      "SQLite",
+      "Firebase",
+      "IPFS",
+      "Google Sheets API"
+    ],
+    "DevOps & Tools": [
+      "Git",
+      "Docker",
+      "Jenkins",
+      "CI/CD Pipelines",
+      "Bitbucket",
+      "Maven",
+      "Nexus",
+      "Swagger"
+    ],
+    "Agentic AI": [
+      "n8n",
+      "Zapier",
+      "Langflow",
+      "Prompt Engineering",
+      "LLM Orchestration"
+    ]
+  },
+
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Tendering Platform",
+      "description": "A cost-effective web-based E-Tendering system replacing hardware Digital Signature Certificates with Aadhaar-based OTP verification and DigiLocker integration. Automated bid submission, identity verification, and document archiving — reducing operational costs by 65%. Won 1st Prize nationally at Smart India Hackathon 2020 against 200,000+ participants.",
+      "tech": [
+        "Python",
+        "HTML/CSS/JS",
+        "Aadhaar API",
+        "DigiLocker",
+        "UPI",
+        "SQL"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Domain-Adapted RAG for Biomedical QA",
+      "description": "Fine-tuned Phi-3 Mini (3.8B) with LoRA and Q4_K_M quantization for local deployment via Ollama. Built a RAG pipeline using Sentence Transformers and FAISS over MedQA documents to reduce hallucinations, with measurable ROUGE and BERTScore gains. Implemented Domain-Adaptive Pre-Training (DAPT) and pseudo-label distillation on PubMedQA.",
+      "tech": [
+        "Python",
+        "Phi-3 Mini",
+        "LoRA",
+        "FAISS",
+        "Sentence Transformers",
+        "Ollama",
+        "T5",
+        "BERTScore"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Speech-based Emotion Recognition",
+      "description": "End-to-end SER pipeline classifying 5 emotions from 3-second speech clips using 88 eGeMAPSv02 acoustic functionals extracted via openSMILE. A 1200-tree Random Forest with balanced class weighting outperformed CNN/RNN baselines, achieving ~82% accuracy on a blind test set with speaker-independent 5-fold cross-validation.",
+      "tech": [
+        "Python",
+        "openSMILE",
+        "Scikit-learn",
+        "Random Forest",
+        "SVM",
+        "Logistic Regression"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Hindi / Hinglish Toxicity Detection",
+      "description": "Fine-tuned XLM-Roberta for multi-label toxicity classification on Hindi social media data with Integrated Gradients (Captum) explainability. Evaluated GPT-4o-mini for zero-shot, few-shot, and chain-of-thought detection on 5K samples — achieving 85.6% accuracy and 94.9% precision — alongside a cost-aware framework tracking inference cost ($2.66 for full dataset).",
+      "tech": [
+        "Python",
+        "XLM-Roberta",
+        "GPT-4o-mini",
+        "PyTorch",
+        "Captum",
+        "Integrated Gradients"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Movie Recommendation System",
+      "description": "Data-driven recommendation system on 20,000+ IMDb and TMDB records combining KNN (Cosine Similarity), XGBoost, and HDBSCAN clustering. Engineered genre embeddings and keyword features, achieving a 30% boost in relevance scoring. Wrapped in an interactive Streamlit dashboard with Plotly for real-time filtering by mood, genre, actor, or director.",
+      "tech": [
+        "Python",
+        "KNN",
+        "XGBoost",
+        "HDBSCAN",
+        "Streamlit",
+        "Plotly",
+        "Pandas",
+        "Scikit-learn"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Roam.io — Travel Management App",
+      "description": "Full-stack travel management application using React.js and PostgreSQL for itinerary planning, attraction discovery, and booking. Features a multi-day itinerary planner with calendar visualization, dynamic SQL-backed search across 1000+ travel records, and Google Sheets API integration for live admin feedback — improving task completion time by 25% in peer testing.",
+      "tech": [
+        "React.js",
+        "PostgreSQL",
+        "Google Sheets API",
+        "RESTful APIs",
+        "React Hooks"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Reddit Engine — Backend in Go",
+      "description": "Reddit-inspired backend engine in Go implementing posts, voting, messaging, and subreddit management for 10+ simulated users via RESTful APIs. Leveraged goroutines and channel-based IPC for concurrent, race-condition-free handling of real-time votes and nested comment threads. Achieved >95% functional test coverage across all core subsystems.",
+      "tech": [
+        "Go",
+        "Goroutines",
+        "Channels",
+        "RESTful APIs",
+        "Concurrent Programming"
+      ],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Metacognition Tracker",
+      "description": "Web-based platform for tracking learner metacognition via clickstream data, navigation flow, and NLP-driven reflection scoring (TF-IDF). Behavioral metrics like dwell time and click hesitation were combined with linguistic cues to deliver adaptive nudges, yielding a 25% improvement in learning outcomes over a 45-day study. Validated across 60+ sessions with a Pearson correlation of 0.82 against instructor rubric scores.",
+      "tech": ["AngularJS", "SQL", "Python", "NLP", "TF-IDF", "VADER"],
+      "github": "",
+      "demo": "",
+      "image": "",
+      "featured": false
+    }
+  ],
+
+  "hackathons": [
+    {
+      "id": 1,
+      "event": "Smart India Hackathon 2020",
+      "result": "1st Prize - National Winner",
+      "project": "E-Tendering Platform",
+      "description": "Built a web-based E-Tendering solution replacing hardware DSCs with Aadhaar-based OTP verification and DigiLocker integration, cutting procurement operational costs by 65% and eliminating manual errors.",
+      "date": "2020",
+      "team": 6,
+      "tech": [
+        "Python",
+        "Aadhaar API",
+        "DigiLocker",
+        "UPI",
+        "HTML/CSS/JS",
+        "SQL"
+      ]
+    },
+    {
+      "id": 2,
+      "event": "Hacklytics 2026",
+      "result": "Participant",
+      "project": "APEX — F1 Strategy & Chaos Simulator",
+      "description": "Built a real-time dual-screen F1 race strategy simulator using a WebSocket architecture. An XGBoost model (R² = 0.95, MAE ~0.29s) predicts baseline lap times, feeding a NumPy Monte Carlo engine running 10,000 race simulations in <0.2s. Chaos events like rain and safety cars are injected live via an iPad console, with Gemini LLM formatting results into team radio calls.",
+      "date": "2026",
+      "team": 4,
+      "tech": [
+        "Python",
+        "FastAPI",
+        "XGBoost",
+        "NumPy",
+        "FastF1",
+        "WebSocket",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML5 Canvas",
+        "Gemini API",
+        "scikit-learn"
+      ]
+    }
+  ],
+
+  "certifications": [
+    {
+      "id": 1,
+      "name": "HiPerGator User Training",
+      "issuer": "University of Florida",
+      "date": "August 2025",
+      "credentialUrl": "https://www.credly.com/badges/bbd56102-7a46-4bb6-bd0e-89b333d20a12/public_url",
+      "icon": "uf"
+    },
+
+    {
+      "id": 2,
+      "name": "Fundamentals of Deep Learning",
+      "issuer": "Nvidia",
+      "date": "July 2025",
+      "credentialUrl": "https://learn.nvidia.com/certificates?id=gfjeGfMqQWSQ6_lVwYEp8w",
+      "icon": "nvidia"
+    }
+  ],
+
+  "competitiveProgramming": {
+    "profiles": [
+      {
+        "id": 1,
+        "platform": "LeetCode",
+        "username": "deshmukhsanket",
+        "url": "https://leetcode.com/deshmukhsanket",
+        "stats": {
+          "easy": 293,
+          "medium": 429,
+          "hard": 75
+        }
+      }
+    ],
+    "ppoOffers": [
+      {
+        "id": 1,
+        "company": "LTIMindtree",
+        "role": "Senior Data Engineer (DE - II)",
+        "year": "2021",
+        "package": "",
+        "description": "Earned a Pre-Placement Offer from LTIMindtree through the Infinity Coding Challenge (ICC), a national competition with 100,000+ participants. Successfully cleared all 3 rounds, finishing in the top 0.2% of participants to qualify for the SDE2 PPO."
+      },
+      {
+        "id": 2,
+        "company": "Infosys",
+        "role": "Systems Engineer Specialist (SDE - II)",
+        "year": "2020",
+        "package": "",
+        "description": "Secured a Pre-Placement Offer from Infosys by competing in HackWithInfy 2020, a national-level coding competition with 200,000+ participants. Cleared Round 1 and Round 2, finishing in the top 0.3% of all participants to qualify for the SDE2 PPO."
+      },
+      {
+        "id": 3,
+        "company": "TCS",
+        "role": "Software Engineer (SDE - I)",
+        "year": "2020",
+        "package": "",
+        "description": "Received a Pre-Placement Offer from TCS by qualifying in TCS CodeVita Season 8, one of the world's largest coding competitions with 300,000+ participants. Cleared Round 1, placing in the top 3–5% of all participants to secure the SDE1 offer."
+      },
+      {
+        "id": 4,
+        "company": "Persistent Systems",
+        "role": "Software Engineer (SDE - I)",
+        "year": "2020",
+        "package": "",
+        "description": "Secured a Pre-Placement Offer from Persistent Systems through Smart India Hackathon (SIH) 2020, a national hackathon with 500,000+ student participants. Competed at the Grand Finale level among 1,500+ teams nationwide, earning an SDE PPO as an industry sponsor selection."
+      }
+    ]
+  },
+
+  "awards": [
+    {
+      "id": 1,
+      "title": "Technical Improvement Award",
+      "organisation": "Nordea",
+      "year": "2023",
+      "description": "Awarded for consistently delivering complex tasks with high quality and thorough documentation. Recognized for my courage and capability in tackling and successfully completing a diverse range of technical challenges."
+    },
+    {
+      "id": 2,
+      "title": "Special Recognition Award",
+      "organisation": "Nordea",
+      "year": "2022",
+      "description": "Received special recognition from the client for exceptional performance as a quick learner and unwavering support to team members."
+    },
+    {
+      "id": 3,
+      "title": "1st Prize — Smart India Hackathon 2020",
+      "organisation": "Ministry of Education, Government of India",
+      "year": "2020",
+      "description": "Won 1st prize nationally for the E-Tendering problem statement, competing against 200,000+ participants and 33,000+ teams from across India."
+    },
+    {
+      "id": 4,
+      "title": "Merit Award for Excellence in Competitive Programming",
+      "organisation": "CSI-DBIT, University of Mumbai",
+      "year": "2018",
+      "description": "Honored for exceptional performance in competitive programming contests, consistently achieving a top 3 rank in 3 out of 4 events. This award recognizes my dedication, problem-solving skills, and ability to perform under pressure."
+    }
+  ]
+}
