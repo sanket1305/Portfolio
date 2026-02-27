@@ -17,7 +17,7 @@ export default function Projects({ data }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 flex flex-col hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group"
+            className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 flex flex-col hover:border-cyan-500/50 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group"
           >
             <div className="flex items-start justify-between mb-3">
               <div className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 group-hover:bg-cyan-50 dark:group-hover:bg-cyan-400/10 transition-colors duration-300">

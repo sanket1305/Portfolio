@@ -87,7 +87,7 @@ export default function CompetitiveProgramming({ data }) {
                   transition={{ duration: 0.45, delay: i * 0.1 }}
                   className={`
                     group relative flex flex-col
-                    bg-white dark:bg-gray-900
+                    bg-gray-50 dark:bg-gray-900
                     border ${cardBorder} ${hoverBorder}
                     rounded-xl p-6
                     hover:shadow-lg ${hoverShadow}
@@ -153,7 +153,7 @@ export default function CompetitiveProgramming({ data }) {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="flex items-start gap-4 p-5 md:p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300"
+                  className="flex items-start gap-4 p-5 md:p-6 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300"
                 >
                   {/* Company logo or fallback icon */}
                   {logo ? (

@@ -25,7 +25,7 @@ export default function Hackathons({ data }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 flex flex-col hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300"
+            className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 flex flex-col hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300"
           >
             <span className={`inline-flex items-center gap-1.5 self-start px-2.5 py-1 text-xs font-semibold rounded-full border mb-4 ${resultColorMap(hack.result)}`}>
               <Trophy size={11} />

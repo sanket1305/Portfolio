@@ -17,7 +17,7 @@ export default function Certifications({ data }) {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
           >
-            <div className="flex items-start gap-4 p-5 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300 group">
+            <div className="flex items-start gap-4 p-5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300 group">
               <div className="p-2.5 rounded-lg bg-cyan-50 dark:bg-cyan-400/10 border border-cyan-200 dark:border-cyan-400/20 flex-shrink-0 mt-0.5">
                 <BadgeCheck size={20} className="text-cyan-600 dark:text-cyan-400" />
               </div>

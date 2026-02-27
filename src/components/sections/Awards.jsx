@@ -16,7 +16,7 @@ export default function Awards({ data }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="flex items-start gap-4 p-5 md:p-6 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300"
+            className="flex items-start gap-4 p-5 md:p-6 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300"
           >
             <div className="p-2.5 rounded-lg bg-amber-50 dark:bg-amber-400/10 border border-amber-200 dark:border-amber-400/20 flex-shrink-0 mt-0.5">
               <Award size={20} className="text-amber-500 dark:text-amber-400" />
