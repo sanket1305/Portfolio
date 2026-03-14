@@ -137,60 +137,82 @@
   ],
 
   "skills": {
-    "Languages": ["Python", "Java", "Go", "JavaScript", "SQL", "Solidity"],
-    "AI / ML & NLP": [
+    "Languages": ["Python", "Java", "Go", "JavaScript", "C/C++", "SQL"],
+    "Agentic AI": [
+      "LangChain",
+      "LangGraph",
+      "Model Context Protocol (MCP)",
+      "Agent-to-Agent (A2A)",
+      "Google ADK",
+      "RAG Pipelines",
+      "Prompt Engineering",
+      "LLM Fine-tuning",
+      "n8n",
+      "Langflow",
+      "LLM Orchestration"
+    ],
+    "AI / ML": [
+      "PyTorch",
       "Scikit-learn",
       "XGBoost",
       "Random Forest",
       "HDBSCAN",
-      "RAG (FAISS)",
       "LoRA Fine-Tuning",
       "Sentence Transformers",
       "XLM-Roberta",
+      "HuggingFace",
       "VADER",
-      "LangChain"
+      "FAISS"
     ],
     "Data Engineering": [
       "Apache Spark",
+      "Apache Kafka",
+      "Apache Airflow",
+      "dbt",
       "Hive",
+      "HDFS",
+      "Sqoop",
       "ETL Pipelines",
-      "Data Partitioning",
-      "Data Quality",
       "Distributed Systems"
+    ],
+    "Databases & Cloud": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Snowflake",
+      "SQLite",
+      "Firebase",
+      "AWS (S3, Glue, Lambda)",
+      "GCP",
+      "Azure"
     ],
     "Frameworks & Libraries": [
       "Spring Boot",
       "React.js",
-      "AngularJS",
       "Node.js",
+      "Django",
+      "AngularJS",
       "Pandas",
+      "NumPy",
       "Plotly",
       "Streamlit",
       "Web3.js"
     ],
-    "Databases & Storage": [
-      "PostgreSQL",
-      "SQLite",
-      "Firebase",
-      "IPFS",
-      "Google Sheets API"
+    "Data Visualization": [
+      "Tableau",
+      "Power BI",
+      "Matplotlib"
     ],
     "DevOps & Tools": [
       "Git",
       "Docker",
+      "Linux",
       "Jenkins",
       "CI/CD Pipelines",
+      "Jira",
+      "Postman",
       "Bitbucket",
-      "Maven",
-      "Nexus",
-      "Swagger"
-    ],
-    "Agentic AI": [
-      "n8n",
-      "Zapier",
-      "Langflow",
-      "Prompt Engineering",
-      "LLM Orchestration"
+      "Maven"
     ]
   },
 
@@ -399,9 +421,9 @@
         "username": "deshmukhsanket",
         "url": "https://leetcode.com/deshmukhsanket",
         "stats": {
-          "easy": 293,
-          "medium": 429,
-          "hard": 75
+          "easy": 298,
+          "medium": 444,
+          "hard": 78
         }
       }
     ],

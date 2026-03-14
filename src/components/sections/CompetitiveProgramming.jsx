@@ -1,8 +1,9 @@
-import { ExternalLink, Briefcase, Code2 } from 'lucide-react';
+import { ExternalLink, Briefcase, Code2, RefreshCw } from 'lucide-react';
 import { SiLeetcode } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import SectionWrapper from '../ui/SectionWrapper';
 import SectionTitle from '../ui/SectionTitle';
+import { useLeetCodeStats } from '../../hooks/useLeetCodeStats';
 
 import ltimLogo       from '../../assets/ltimindtree_logo.jpeg';
 import infosysLogo    from '../../assets/infosys_logo.jpeg';
@@ -49,10 +50,93 @@ function StatPill({ label, value, colour }) {
   );
 }
 
+/* ── Profile card (fetches live stats) ─────────────────────── */
+function ProfileCard({ profile, index }) {
+  const cfg = PLATFORM_CONFIG[profile.platform] ?? fallbackConfig;
+  const { Icon, iconColor, iconBg, iconBorder, cardBorder, hoverBorder, hoverShadow } = cfg;
+
+  const { stats, loading, error } = useLeetCodeStats(
+    profile.platform === 'LeetCode' ? profile.username : null,
+    profile.stats,
+  );
+
+  const solved = (stats.easy ?? 0) + (stats.medium ?? 0) + (stats.hard ?? 0);
+
+  return (
+    <motion.a
+      key={profile.id}
+      href={profile.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.1 }}
+      className={`
+        group relative flex flex-col
+        bg-gray-50 dark:bg-gray-900
+        border ${cardBorder} ${hoverBorder}
+        rounded-xl p-6
+        hover:shadow-lg ${hoverShadow}
+        transition-all duration-300
+      `}
+    >
+      {/* Header row */}
+      <div className="flex items-center justify-between mb-5">
+        <div className={`p-2.5 rounded-lg ${iconBg} border ${iconBorder}`}>
+          <Icon size={22} className={iconColor} />
+        </div>
+        <span className="flex items-center gap-1 text-xs font-medium text-gray-400 dark:text-gray-500 group-hover:text-cyan-500 transition-colors">
+          Visit profile <ExternalLink size={12} />
+        </span>
+      </div>
+
+      {/* Platform + username */}
+      <h3 className="font-bold text-gray-900 dark:text-gray-50 text-base mb-0.5">
+        {profile.platform}
+      </h3>
+      <p className="text-sm text-gray-400 dark:text-gray-500 font-mono mb-5">
+        @{profile.username}
+      </p>
+
+      {/* Total solved badge */}
+      <div className="flex items-center gap-2 mb-4">
+        {loading ? (
+          <RefreshCw size={18} className="animate-spin text-gray-400 dark:text-gray-500" />
+        ) : (
+          <span className="text-2xl font-extrabold text-gray-900 dark:text-gray-50">
+            {solved}
+          </span>
+        )}
+        <span className="text-xs text-gray-400 dark:text-gray-500 leading-tight">
+          problems<br />solved
+          {error && <span className="block text-[10px] text-gray-300 dark:text-gray-600">(cached)</span>}
+        </span>
+      </div>
+
+      {/* Easy / Medium / Hard breakdown */}
+      <div className="flex gap-2 mt-auto">
+        {loading ? (
+          <>
+            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
+            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
+            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
+          </>
+        ) : (
+          <>
+            <StatPill label="Easy"   value={stats.easy}   colour="text-emerald-500 dark:text-emerald-400" />
+            <StatPill label="Medium" value={stats.medium} colour="text-amber-500   dark:text-amber-400"   />
+            <StatPill label="Hard"   value={stats.hard}   colour="text-rose-500    dark:text-rose-400"    />
+          </>
+        )}
+      </div>
+    </motion.a>
+  );
+}
+
 /* ── Main component ────────────────────────────────────────── */
 export default function CompetitiveProgramming({ data }) {
   const { profiles = [], ppoOffers = [] } = data;
-  const total = (s) => (s.easy ?? 0) + (s.medium ?? 0) + (s.hard ?? 0);
 
   return (
     <SectionWrapper id="competitive" className="border-b border-gray-200/60 dark:border-gray-800/40">
@@ -69,68 +153,9 @@ export default function CompetitiveProgramming({ data }) {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {profiles.map((profile, i) => {
-              const cfg = PLATFORM_CONFIG[profile.platform] ?? fallbackConfig;
-              const { Icon, iconColor, iconBg, iconBorder, cardBorder, hoverBorder, hoverShadow } = cfg;
-              const stats = profile.stats;
-              const solved = total(stats);
-
-              return (
-                <motion.a
-                  key={profile.id}
-                  href={profile.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: i * 0.1 }}
-                  className={`
-                    group relative flex flex-col
-                    bg-gray-50 dark:bg-gray-900
-                    border ${cardBorder} ${hoverBorder}
-                    rounded-xl p-6
-                    hover:shadow-lg ${hoverShadow}
-                    transition-all duration-300
-                  `}
-                >
-                  {/* Header row */}
-                  <div className="flex items-center justify-between mb-5">
-                    <div className={`p-2.5 rounded-lg ${iconBg} border ${iconBorder}`}>
-                      <Icon size={22} className={iconColor} />
-                    </div>
-                    <span className="flex items-center gap-1 text-xs font-medium text-gray-400 dark:text-gray-500 group-hover:text-cyan-500 transition-colors">
-                      Visit profile <ExternalLink size={12} />
-                    </span>
-                  </div>
-
-                  {/* Platform + username */}
-                  <h3 className="font-bold text-gray-900 dark:text-gray-50 text-base mb-0.5">
-                    {profile.platform}
-                  </h3>
-                  <p className="text-sm text-gray-400 dark:text-gray-500 font-mono mb-5">
-                    @{profile.username}
-                  </p>
-
-                  {/* Total solved badge */}
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="text-2xl font-extrabold text-gray-900 dark:text-gray-50">
-                      {solved}
-                    </span>
-                    <span className="text-xs text-gray-400 dark:text-gray-500 leading-tight">
-                      problems<br />solved
-                    </span>
-                  </div>
-
-                  {/* Easy / Medium / Hard breakdown */}
-                  <div className="flex gap-2 mt-auto">
-                    <StatPill label="Easy"   value={stats.easy}   colour="text-emerald-500 dark:text-emerald-400" />
-                    <StatPill label="Medium" value={stats.medium} colour="text-amber-500   dark:text-amber-400"   />
-                    <StatPill label="Hard"   value={stats.hard}   colour="text-rose-500    dark:text-rose-400"    />
-                  </div>
-                </motion.a>
-              );
-            })}
+            {profiles.map((profile, i) => (
+              <ProfileCard key={profile.id} profile={profile} index={i} />
+            ))}
           </div>
         </div>
       )}
