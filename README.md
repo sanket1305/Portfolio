@@ -1,44 +1,37 @@
-# Personal Portfolio Website
+# Sanket Deshmukh — Portfolio
 
 A modern, responsive developer portfolio built with **React 19** and **Vite**, styled with **Tailwind CSS** and animated with **Framer Motion**. All content is driven by a single JSON file — no code changes needed to update your info.
 
 ---
 
-## Live Demo
+## 🌐 Live Demo
 
-> _Add your deployed URL here (e.g., Netlify, Vercel, GitHub Pages)_
+**[sanket1305.github.io/Portfolio](https://sanket1305.github.io/Portfolio/)**
 
 ---
 
 ## Screenshots
 
-### Hero / Landing Section
+### Hero
 ![Hero Section](docs/screenshots/hero.png)
-> _Replace with a screenshot of your hero/landing section_
 
-### Skills Section
+### Skills
 ![Skills Section](docs/screenshots/skills.png)
-> _Replace with a screenshot of your skills grid_
 
-### Work Experience Section
+### Work Experience
 ![Work Experience Section](docs/screenshots/experience.png)
-> _Replace with a screenshot of your work experience timeline_
 
-### Projects Section
+### Projects
 ![Projects Section](docs/screenshots/projects.png)
-> _Replace with a screenshot of your projects grid_
 
-### Hackathons Section
+### Hackathons
 ![Hackathons Section](docs/screenshots/hackathons.png)
-> _Replace with a screenshot of your hackathons section_
 
 ### Certifications & Awards
 ![Certifications Section](docs/screenshots/certifications.png)
-> _Replace with a screenshot of your certifications and awards_
 
-### Contact Section
+### Contact
 ![Contact Section](docs/screenshots/contact.png)
-> _Replace with a screenshot of your contact section_
 
 ---
 
@@ -51,7 +44,8 @@ A modern, responsive developer portfolio built with **React 19** and **Vite**, s
 | Styling | Tailwind CSS 3 |
 | Animations | Framer Motion |
 | Icons | Lucide React, React Icons |
-| Linting | ESLint |
+| Deployment | GitHub Pages |
+| CI/CD | GitHub Actions |
 
 ---
 
@@ -59,7 +53,11 @@ A modern, responsive developer portfolio built with **React 19** and **Vite**, s
 
 ```
 Portfolio/
-├── public/                  # Static assets served as-is
+├── .github/
+│   └── workflows/
+│       └── update-leetcode-stats.yml  # Daily LeetCode stats update + deploy
+├── public/
+│   └── leetcode-stats.json            # Auto-updated by GitHub Actions
 ├── src/
 │   ├── assets/              # Images and static files used in JSX
 │   ├── components/
@@ -69,13 +67,15 @@ Portfolio/
 │   │   └── ui/              # Reusable UI primitives
 │   ├── data/
 │   │   └── portfolio.json   # ← All site content lives here
+│   ├── hooks/
+│   │   └── useLeetCodeStats.js  # Reads from local JSON (no external API)
 │   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
 │   └── index.css
-├── index.html
+├── docs/
+│   └── screenshots/         # README screenshots (auto-generated)
+├── scripts/
+│   └── take-screenshots.mjs # Puppeteer screenshot helper
 ├── vite.config.js
-├── tailwind.config.js
 └── package.json
 ```
 
@@ -92,8 +92,8 @@ Portfolio/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
-cd portfolio
+git clone https://github.com/deshmukhsanket/Portfolio.git
+cd Portfolio
 
 # Install dependencies
 npm install
@@ -111,13 +111,17 @@ npm run build       # Outputs to dist/
 npm run preview     # Preview the production build locally
 ```
 
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy      # Builds and pushes dist/ to the gh-pages branch
+```
+
 ---
 
 ## Customisation
 
 All content is managed through a single file: **`src/data/portfolio.json`**
-
-### Sections you can configure
 
 | Key | What it controls |
 |---|---|
@@ -129,56 +133,31 @@ All content is managed through a single file: **`src/data/portfolio.json`**
 | `hackathons` | Hackathon events, results, and project descriptions |
 | `certifications` | Certifications with issuer, date, and credential URL |
 | `awards` | Awards and recognitions |
-
-### Adding a profile photo
-
-Place your photo in `src/assets/` and reference it inside the `Hero` component:
-
-```jsx
-import profilePhoto from '../assets/YourPhoto.png';
-```
-
-### Adding project screenshots
-
-Add project images to `src/assets/` and set the `image` field in `portfolio.json`:
-
-```json
-{
-  "id": 1,
-  "title": "My Project",
-  "image": "/src/assets/my-project-screenshot.png"
-}
-```
+| `competitiveProgramming` | LeetCode / Codeforces profile and stats |
 
 ---
 
-## Deployment
+## LeetCode Stats (Auto-Updated)
 
-### Netlify
+LeetCode problem counts are fetched **server-side** by a GitHub Actions workflow that runs every day at 2 AM UTC. It hits LeetCode's GraphQL API, updates `public/leetcode-stats.json`, rebuilds the site, and deploys — no third-party API service required.
+
+To enable it, go to **Settings → Actions → General** and set **Workflow permissions** to **Read and write**.
+
+You can also trigger it manually from the **Actions** tab → **Update LeetCode Stats & Deploy** → **Run workflow**.
+
+---
+
+## Regenerating Screenshots
 
 ```bash
-npm run build
-# Drag and drop the dist/ folder to Netlify, or connect your GitHub repo
+# Make sure the dev server is running first
+npm run dev
+
+# Then in a separate terminal
+node scripts/take-screenshots.mjs
 ```
 
-### Vercel
-
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-### GitHub Pages
-
-Add `base` to `vite.config.js`:
-
-```js
-export default {
-  base: '/your-repo-name/',
-}
-```
-
-Then build and push the `dist/` folder to the `gh-pages` branch.
+Screenshots are saved to `docs/screenshots/`.
 
 ---
 
