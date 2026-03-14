@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
-const API_BASE = 'https://alfa-leetcode-api.onrender.com';
-
 /**
- * Fetches live LeetCode stats for a given username.
- * Falls back to `fallbackStats` if the request fails.
+ * Reads LeetCode stats from the locally bundled /leetcode-stats.json.
+ * That file is auto-updated daily by the GitHub Actions workflow
+ * (.github/workflows/update-leetcode-stats.yml), so no external API
+ * call is needed at runtime — zero CORS issues, zero cold-start delays.
+ *
+ * Falls back to `fallbackStats` (from portfolio.json) if the fetch fails.
  */
 export function useLeetCodeStats(username, fallbackStats) {
   const [stats, setStats] = useState(fallbackStats);
@@ -21,22 +23,24 @@ export function useLeetCodeStats(username, fallbackStats) {
 
     async function fetchStats() {
       try {
-        const res = await fetch(`${API_BASE}/${username}/solved`);
+        // BASE_URL = '/Portfolio/' on GitHub Pages, '/' in local dev
+        const url = `${import.meta.env.BASE_URL}leetcode-stats.json`;
+        const res = await fetch(url);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
         if (!cancelled) {
           setStats({
-            easy:   data.easySolved   ?? fallbackStats.easy,
-            medium: data.mediumSolved ?? fallbackStats.medium,
-            hard:   data.hardSolved   ?? fallbackStats.hard,
+            easy:   data.easy   ?? fallbackStats.easy,
+            medium: data.medium ?? fallbackStats.medium,
+            hard:   data.hard   ?? fallbackStats.hard,
           });
           setError(null);
         }
       } catch (err) {
         if (!cancelled) {
           setError(err.message);
-          // keep fallbackStats already set as default
+          // fallbackStats already set as the initial state
         }
       } finally {
         if (!cancelled) setLoading(false);

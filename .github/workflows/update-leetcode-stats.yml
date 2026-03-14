@@ -1,0 +1,70 @@
+name: Update LeetCode Stats & Deploy
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # Daily at 2 AM UTC
+  workflow_dispatch:        # Manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch LeetCode stats via GraphQL
+        run: |
+          RESPONSE=$(curl -s --max-time 30 -X POST https://leetcode.com/graphql/ \
+            -H "Content-Type: application/json" \
+            -H "Referer: https://leetcode.com" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+            -d '{"query":"{ matchedUser(username: \"deshmukhsanket\") { submitStatsGlobal { acSubmissionNum { difficulty count } } } }"}')
+
+          echo "API Response: $RESPONSE"
+
+          if echo "$RESPONSE" | jq -e '.data.matchedUser' > /dev/null 2>&1; then
+            EASY=$(echo   "$RESPONSE" | jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[] | select(.difficulty == "Easy")   | .count')
+            MEDIUM=$(echo "$RESPONSE" | jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[] | select(.difficulty == "Medium") | .count')
+            HARD=$(echo   "$RESPONSE" | jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[] | select(.difficulty == "Hard")   | .count')
+            TOTAL=$(echo  "$RESPONSE" | jq '.data.matchedUser.submitStatsGlobal.acSubmissionNum[] | select(.difficulty == "All")    | .count')
+            UPDATED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+            cat > public/leetcode-stats.json <<EOF
+          {
+            "easy": $EASY,
+            "medium": $MEDIUM,
+            "hard": $HARD,
+            "total": $TOTAL,
+            "updatedAt": "$UPDATED_AT"
+          }
+          EOF
+
+            echo "✅ Stats updated: Easy=$EASY Medium=$MEDIUM Hard=$HARD Total=$TOTAL"
+          else
+            echo "⚠️  GraphQL fetch failed — keeping existing public/leetcode-stats.json"
+          fi
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'chore: update LeetCode stats [skip ci]'
