@@ -24,7 +24,7 @@
       "company": "UFIT — University of Florida",
       "role": "Agentic AI Intern",
       "duration": "January 2026 – Present",
-      "location": "Gainesville, FL",
+      "location": "Gainesville, FL, USA",
       "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
       "bullets": [
         "Automated manual campus service workflows using agentic AI and LLM-based agents, reducing repetitive support effort for enterprise systems",
@@ -38,7 +38,7 @@
       "company": "LTIMindtree",
       "role": "Senior Data Engineer",
       "duration": "July 2021 – July 2024",
-      "location": "Mumbai, India",
+      "location": "Mumbai, MH, India",
       "description": "Designed and maintained production-grade ETL pipelines and data platforms for a global banking client with 5M+ users.",
       "bullets": [
         "Designed and implemented 15+ ETL pipelines using Java, Apache Spark, and Spring Boot, processing 1M+ records daily from CSV, binary, and streaming sources across customer holdings, transactions, and forex rates",
@@ -66,7 +66,7 @@
       "company": "Sequelstring Pvt Ltd",
       "role": "Blockchain Developer Intern",
       "duration": "2020",
-      "location": "India",
+      "location": "Mumbai, MH, India",
       "description": "Built a blockchain-based multi-party contract management system with end-to-end encryption and decentralized storage.",
       "bullets": [
         "Developed a web-based blockchain application enabling up to 5 parties to securely share, sign, and verify contracts using decentralized logic",
@@ -90,7 +90,7 @@
       "company": "CSI-DBIT",
       "role": "Android App Developer Intern",
       "duration": "2019 – 2020",
-      "location": "Mumbai, India",
+      "location": "Mumbai, MH,India",
       "description": "Built a native Android app to digitize event management and internal operations for the CSI student chapter.",
       "bullets": [
         "Developed a native Android application for CSI-DBIT, digitizing event management workflows and driving a 40% increase in student participation",
