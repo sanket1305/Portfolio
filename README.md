@@ -1,4 +1,4 @@
-# Sanket Deshmukh — Portfolio
+# Sanket Sunil Deshmukh — Portfolio
 
 A modern, responsive developer portfolio built with **React 19** and **Vite**, styled with **Tailwind CSS** and animated with **Framer Motion**. All content is driven by a single JSON file — no code changes needed to update your info.
 

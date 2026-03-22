@@ -77,7 +77,7 @@ export default function ResumeModal({ isOpen, onClose }) {
               <div className="flex items-center gap-2 min-w-0">
                 <FileText size={15} className="text-cyan-400 shrink-0" />
                 <span className="text-sm font-semibold text-gray-200 tracking-wide truncate">
-                  Sanket Deshmukh — Resume
+                  Sanket Sunil Deshmukh — Resume
                 </span>
               </div>
 
@@ -120,7 +120,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <div className="flex-1 overflow-hidden bg-gray-950">
               <iframe
                 src={`${resumePdf}#toolbar=0&navpanes=0&view=FitH`}
-                title="Sanket Deshmukh Resume"
+                title="Sanket Sunil Deshmukh Resume"
                 className="w-full h-full border-0"
                 loading="lazy"
               >

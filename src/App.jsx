@@ -12,6 +12,7 @@ import Certifications from './components/sections/Certifications';
 import Awards from './components/sections/Awards';
 import CompetitiveProgramming from './components/sections/CompetitiveProgramming';
 import Contact from './components/sections/Contact';
+import PortfolioChatbot from './components/ui/PortfolioChatbot';
 
 export default function App() {
   const { personal, workExperience, education, skills, projects, hackathons, certifications, awards, competitiveProgramming } = data;
@@ -48,6 +49,7 @@ export default function App() {
       </main>
 
       <Footer personal={personal} />
+      <PortfolioChatbot />
     </div>
   );
 }
