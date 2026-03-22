@@ -44,7 +44,7 @@
       "role": "Backend (AWS) Developer",
       "duration": "Jan 2026 – Present",
       "location": "Gainesville, FL, USA",
-      "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
+      "description": "Built a RAG-powered food resource chatbot on AWS, connecting homeless and low-income individuals to 122+ local food providers with geo-aware search and enterprise-grade security.",
       "bullets": [
         "Built and deployed a RAG-powered AI chatbot on AWS Amplify (LLaMA 3.1, semantic embeddings, 122+ providers), reducing irrelevant food resource results by ~60% via PostGIS spatial filtering and history-aware intent extraction.",
         "Engineered dual-layer guardrails with 7-step input validation — prompt injection, crisis routing, PII scrubbing — securing 100% of chatbot sessions with zero PII persisted, hosted on a serverless AWS-backed architecture.",
