@@ -27,8 +27,8 @@
       "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
       "bullets": [
         "Automated manual campus service workflows using agentic AI and LLM-based agents, reducing repetitive support effort for enterprise systems",
-        "Designed and evaluated prompt-driven Python workflows, improving response accuracy and reliability across thousands of student and faculty interactions",
-        "Developed NaviGator AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%"
+        "Designed and evaluated prompt-driven Python workflows, improving response accuracy and reliability across thousands of student and faculty interactions.",
+        "Developed NaviGator AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%."
       ],
       "tech": [
         "Python",
@@ -40,22 +40,42 @@
     },
     {
       "id": 2,
+      "company": "University of Florida",
+      "role": "Backend (AWS) Developer",
+      "duration": "Jan 2026 – Present",
+      "location": "Gainesville, FL, USA",
+      "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
+      "bullets": [
+        "Built and deployed a RAG-powered AI chatbot on AWS Amplify (LLaMA 3.1, semantic embeddings, 122+ providers), reducing irrelevant food resource results by ~60% via PostGIS spatial filtering and history-aware intent extraction.",
+        "Engineered dual-layer guardrails with 7-step input validation — prompt injection, crisis routing, PII scrubbing — securing 100% of chatbot sessions with zero PII persisted, hosted on a serverless AWS-backed architecture.",
+        "Designed a PostgreSQL + PostGIS schema with Row-Level Security across 6 tables for sub-100ms geo-queries; automated ingestion of 122 providers via a Python CSV pipeline, with CI/CD managed through AWS Amplify reducing deployment overhead by ~70%."
+      ],
+      "tech": [
+        "AWS",
+        "Node.js",
+        "Supabase",
+        "PostgreSQL",
+        "PostGIS"
+      ]
+    },
+    {
+      "id": 3,
       "company": "LTIMindtree",
       "role": "Senior Data Engineer",
       "duration": "Jul 2021 – Jul 2024",
       "location": "Mumbai, MH, India",
       "description": "Designed and maintained production-grade ETL pipelines and data platforms for a global banking client with 5M+ users.",
       "bullets": [
-        "Designed and implemented 15+ ETL pipelines using Java, Apache Spark, and Spring Boot, processing 1M+ records daily from CSV, binary, and streaming sources across customer holdings, transactions, and forex rates",
-        "Migrated legacy Beeline/Hive jobs to Spark, achieving ~45% faster execution across complex multi-account banking data flows",
-        "Built Spark modules for the MiFID II-compliant Cost and Charges (CnC) platform, computing per-customer investment costs and reducing manual audit intervention",
-        "Architected data archiving and partitioning strategies to improve query performance by 60%, supporting regulated data retention and historical lookups",
-        "Streamlined CI/CD using Jenkins, Nexus, and Bitbucket with automated regression tests, cutting post-release defects by 70%",
-        "Integrated Swagger-documented Spring Boot RESTful APIs using Dependency Injection and Factory patterns, accelerating frontend integration by 40%"
+        "Designed and implemented 15+ ETL pipelines using Java, Apache Spark, and Spring Boot, processing 1M+ records daily from CSV, binary, and streaming sources across customer holdings, transactions, and forex rates.",
+        "Migrated legacy Beeline/Hive jobs to Spark, achieving ~45% faster execution across complex multi-account banking data flows.",
+        "Built Spark modules for the MiFID II-compliant Cost and Charges (CnC) platform, computing per-customer investment costs and reducing manual audit intervention.",
+        "Architected data archiving and partitioning strategies to improve query performance by 60%, supporting regulated data retention and historical lookups.",
+        "Streamlined CI/CD using Jenkins, Nexus, and Bitbucket with automated regression tests, cutting post-release defects by 70%.",
+        "Integrated Swagger-documented Spring Boot RESTful APIs using Dependency Injection and Factory patterns, accelerating frontend integration by 40%."
       ],
       "tech": [
-        "Java",
         "Apache Spark",
+        "Java",
         "Spring Boot",
         "Hive",
         "React.js",
@@ -67,17 +87,17 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "company": "Sequelstring Pvt Ltd",
       "role": "Blockchain Developer Intern",
       "duration": "Jun 2019 – Apr 2020",
       "location": "Mumbai, MH, India",
       "description": "Built a blockchain-based multi-party contract management system with end-to-end encryption and decentralized storage.",
       "bullets": [
-        "Developed a web-based blockchain application enabling up to 5 parties to securely share, sign, and verify contracts using decentralized logic",
-        "Authored and deployed 4+ Solidity smart contracts on the Rinkeby Testnet via Web3.js and Node.js, supporting pilot runs with 10+ test users",
-        "Applied AES-256 and RSA-2048 encryption to secure access keys and contract documents; stored 20+ signed contracts on IPFS for tamper resistance",
-        "Used Truffle and Ganache for local contract testing, cutting testnet debugging time by 40%"
+        "Developed a web-based blockchain application enabling up to 5 parties to securely share, sign, and verify contracts using decentralized logic.",
+        "Authored and deployed 4+ Solidity smart contracts on the Rinkeby Testnet via Web3.js and Node.js, supporting pilot runs with 10+ test users.",
+        "Applied AES-256 and RSA-2048 encryption to secure access keys and contract documents; stored 20+ signed contracts on IPFS for tamper resistance.",
+        "Used Truffle and Ganache for local contract testing, cutting testnet debugging time by 40%."
       ],
       "tech": [
         "Solidity",
@@ -91,16 +111,16 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "company": "CSI-DBIT",
       "role": "Android App Developer Intern",
       "duration": "Jun 2019 – Jul 2020",
       "location": "Mumbai, MH,India",
       "description": "Built a native Android app to digitize event management and internal operations for the CSI student chapter.",
       "bullets": [
-        "Developed a native Android application for CSI-DBIT, digitizing event management workflows and driving a 40% increase in student participation",
-        "Built task schedulers, attendance tracking, and role-based access modules using Android SDK and MVC architecture",
-        "Integrated Firebase Cloud Messaging (FCM) for push notifications; used SQLite for offline-first local data persistence"
+        "Developed a native Android application for CSI-DBIT, digitizing event management workflows and driving a 40% increase in student participation.",
+        "Built task schedulers, attendance tracking, and role-based access modules using Android SDK and MVC architecture.",
+        "Integrated Firebase Cloud Messaging (FCM) for push notifications; used SQLite for offline-first local data persistence."
       ],
       "tech": [
         "Android SDK",
@@ -121,8 +141,8 @@
       "duration": "Aug 2024 – May 2026",
       "gpa": "3.92 / 4.0",
       "highlights": [
-        "Participation in Hacklytics (2026), organized by Georgia Tech",
-        "Contributed 1.5 years at UF Recreation and Wellness"
+        "Participation in Hacklytics (2026), organized by Georgia Tech.",
+        "Contributed 1.5 years at UF Recreation and Wellness."
       ]
     },
     {
@@ -133,9 +153,9 @@
       "duration": "Aug 2017 – Jun 2021",
       "gpa": "3.63 / 4.0",
       "highlights": [
-        "1st Prize at Smart India Hackathon (SIH)2020, organized by Ministry of Education, Govt. of India",
-        "Training & Placement Coordinator (2020 – 2021)",
-        "Technical Head of CSI-DBIT (2019 – 2020)"
+        "1st Prize at Smart India Hackathon (SIH)2020, organized by Ministry of Education, Govt. of India.",
+        "Training & Placement Coordinator (2020 – 2021).",
+        "Technical Head of CSI-DBIT (2019 – 2020)."
       ]
     }
   ],
@@ -192,7 +212,7 @@
       "Snowflake",
       "SQLite",
       "Firebase",
-      "AWS (S3, Glue, Lambda)",
+      "AWS",
       "GCP",
       "Azure"
     ],
