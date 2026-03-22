@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Download, FileText } from 'lucide-react';
-import resumePdf from '../../data/Sanket_Deshmukh_Resume.pdf';
+import resumePdf from '../../data/Sanket_Sunil_Deshmukh_Resume.pdf';
 
 export default function ResumeModal({ isOpen, onClose }) {
   const closeButtonRef = useRef(null);
