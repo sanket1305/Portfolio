@@ -240,7 +240,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/e_tendering.jpeg",
+      "image": "images/projects/e_tendering.jpeg",
       "featured": true
     },
     {
@@ -259,7 +259,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/domain_adapted_rag_for_biomedical_qa.jpeg",
+      "image": "images/projects/domain_adapted_rag_for_biomedical_qa.jpeg",
       "featured": true
     },
     {
@@ -276,7 +276,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/speech_based_emotion_recognition.jpeg",
+      "image": "images/projects/speech_based_emotion_recognition.jpeg",
       "featured": false
     },
     {
@@ -293,7 +293,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/hindi_hinglish_toxicity_detection.jpeg",
+      "image": "images/projects/hindi_hinglish_toxicity_detection.jpeg",
       "featured": false
     },
     {
@@ -312,7 +312,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/movie_recommendation_system.jpeg",
+      "image": "images/projects/movie_recommendation_system.jpeg",
       "featured": false
     },
     {
@@ -328,7 +328,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/roam_io.jpeg",
+      "image": "images/projects/roam_io.jpeg",
       "featured": false
     },
     {
@@ -344,7 +344,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/reddit_engine.jpeg",
+      "image": "images/projects/reddit_engine.jpeg",
       "featured": false
     },
     {
@@ -361,7 +361,7 @@
       ],
       "github": "",
       "demo": "",
-      "image": "/Portfolio/src/assets/projects/metacognition_tracker.jpeg",
+      "image": "images/projects/metacognition_tracker.jpeg",
       "featured": false
     }
   ],
@@ -374,7 +374,7 @@
       "description": "Built a web-based E-Tendering solution replacing hardware DSCs with Aadhaar-based OTP verification and DigiLocker integration, cutting procurement operational costs by 65% and eliminating manual errors.",
       "date": "2020",
       "team": 6,
-      "image": "/Portfolio/src/assets/hackathons/sih.jpeg",
+      "image": "images/hackathons/sih.jpeg",
       "tech": [
         "Python",
         "Aadhaar API",
@@ -392,7 +392,7 @@
       "description": "Built a real-time dual-screen F1 race strategy simulator using a WebSocket architecture. An XGBoost model (R\u00b2 = 0.95, MAE ~0.29s) predicts baseline lap times, feeding a NumPy Monte Carlo engine running 10,000 race simulations in <0.2s. Chaos events like rain and safety cars are injected live via an iPad console, with Gemini LLM formatting results into team radio calls.",
       "date": "2026",
       "team": 4,
-      "image": "/Portfolio/src/assets/hackathons/hacklytics_logo.png",
+      "image": "images/hackathons/hacklytics_logo.png",
       "tech": [
         "Python",
         "FastAPI",
@@ -483,7 +483,7 @@
       "organisation": "Nordea",
       "year": "2023",
       "description": "Awarded for consistently delivering complex tasks with high quality and thorough documentation. Recognized for my courage and capability in tackling and successfully completing a diverse range of technical challenges.",
-      "image": "/Portfolio/src/assets/awards/nordea_technical.svg"
+      "image": "images/awards/nordea_technical.svg"
     },
     {
       "id": 2,
@@ -491,7 +491,7 @@
       "organisation": "Nordea",
       "year": "2022",
       "description": "Received special recognition from the client for exceptional performance as a quick learner and unwavering support to team members.",
-      "image": "/Portfolio/src/assets/awards/nordea_recognition.svg"
+      "image": "images/awards/nordea_recognition.svg"
     },
     {
       "id": 3,
@@ -499,7 +499,7 @@
       "organisation": "Ministry of Education, Government of India",
       "year": "2020",
       "description": "Won 1st prize nationally for the E-Tendering problem statement, competing against 200,000+ participants and 33,000+ teams from across India.",
-      "image": "/Portfolio/src/assets/hackathons/sih.jpeg"
+      "image": "images/hackathons/sih.jpeg"
     },
     {
       "id": 4,
@@ -507,7 +507,7 @@
       "organisation": "CSI-DBIT, University of Mumbai",
       "year": "2018",
       "description": "Honored for exceptional performance in competitive programming contests, consistently achieving a top 3 rank in 3 out of 4 events. This award recognizes my dedication, problem-solving skills, and ability to perform under pressure.",
-      "image": "/Portfolio/src/assets/csi_dbit_logo.jpeg"
+      "image": "images/companies/csi_dbit_logo.jpeg"
     }
   ]
 }

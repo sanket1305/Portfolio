@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowDown, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
-import avatarImg from '../../assets/Sanket.png';
+const avatarImg = `${import.meta.env.BASE_URL}images/profile/Sanket.png`;
 import ResumeModal from '../ui/ResumeModal';
 
 function HexagonAvatar() {

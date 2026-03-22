@@ -23,7 +23,7 @@ function AwardCard({ award, index }) {
         >
           {/* Image */}
           <img
-            src={award.image}
+            src={`${import.meta.env.BASE_URL}${award.image}`}
             alt={award.title}
             className="w-full h-full object-cover"
           />

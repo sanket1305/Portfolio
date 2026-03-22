@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0533;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2d0a52;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00205B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFF0A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2)"/>
+
+  <!-- Glow accents -->
+  <circle cx="200" cy="120" r="160" fill="#8B2FBE" fill-opacity="0.15" filter="url(#blur2)"/>
+  <circle cx="620" cy="340" r="140" fill="#00A3E0" fill-opacity="0.12" filter="url(#blur2)"/>
+
+  <!-- Decorative concentric circles -->
+  <circle cx="400" cy="200" r="140" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <circle cx="400" cy="200" r="110" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <circle cx="400" cy="200" r="80" fill="none" stroke="#FFD700" stroke-opacity="0.12" stroke-width="1.5"/>
+
+  <!-- Medal icon -->
+  <g transform="translate(400,165)">
+    <!-- Medal circle -->
+    <circle cx="0" cy="0" r="55" fill="#FFD700" fill-opacity="0.15" stroke="#FFD700" stroke-width="2.5" stroke-opacity="0.8"/>
+    <!-- Ribbon top left -->
+    <rect x="-12" y="-75" width="10" height="30" rx="3" fill="#8B2FBE" transform="rotate(-20)"/>
+    <!-- Ribbon top right -->
+    <rect x="2" y="-75" width="10" height="30" rx="3" fill="#00A3E0" transform="rotate(20)"/>
+    <!-- Star in medal -->
+    <path d="M0,-34 L7.5,-10 L32,-10 L12,6 L19,30 L0,16 L-19,30 L-12,6 L-32,-10 L-7.5,-10 Z"
+          fill="url(#goldGrad)" fill-opacity="0.95"/>
+  </g>
+
+  <!-- NORDEA wordmark -->
+  <text x="400" y="264" font-family="Georgia, serif" font-size="36" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" letter-spacing="8">NORDEA</text>
+
+  <!-- Award label -->
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="13"
+        fill="#FFD700" text-anchor="middle" letter-spacing="3">SPECIAL RECOGNITION</text>
+
+  <!-- Decorative stars -->
+  <text x="310" y="305" font-family="Arial" font-size="12" fill="#FFD700" fill-opacity="0.6">★</text>
+  <text x="480" y="305" font-family="Arial" font-size="12" fill="#FFD700" fill-opacity="0.6">★</text>
+
+  <!-- Bottom accent -->
+  <rect x="330" y="320" width="140" height="2" rx="1" fill="url(#goldGrad)" fill-opacity="0.7"/>
+</svg>

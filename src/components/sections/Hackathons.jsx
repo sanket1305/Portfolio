@@ -38,7 +38,7 @@ export default function Hackathons({ data }) {
                 style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
               >
                 <img
-                  src={hack.image}
+                  src={`${import.meta.env.BASE_URL}${hack.image}`}
                   alt={hack.event}
                   className="w-full h-full object-cover"
                 />

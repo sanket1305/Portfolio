@@ -4,16 +4,13 @@ import SectionWrapper from '../ui/SectionWrapper';
 import SectionTitle from '../ui/SectionTitle';
 import Badge from '../ui/Badge';
 
-import ufitLogo       from '../../assets/uf_information_technology_logo.jpeg';
-import ltimLogo       from '../../assets/ltimindtree_logo.jpeg';
-import sequelLogo     from '../../assets/sequelstring_solutions_and_consultancy_pvt_ltd_logo.jpeg';
-import csiDbitLogo    from '../../assets/csi_dbit_logo.jpeg';
+const BASE = import.meta.env.BASE_URL;
 
 const COMPANY_LOGOS = {
-  'UFIT — University of Florida': ufitLogo,
-  'LTIMindtree':                  ltimLogo,
-  'Sequelstring Pvt Ltd':         sequelLogo,
-  'CSI-DBIT':                     csiDbitLogo,
+  'UFIT — University of Florida': `${BASE}images/companies/uf_information_technology_logo.jpeg`,
+  'LTIMindtree':                  `${BASE}images/companies/ltimindtree_logo.jpeg`,
+  'Sequelstring Pvt Ltd':         `${BASE}images/companies/sequelstring_solutions_and_consultancy_pvt_ltd_logo.jpeg`,
+  'CSI-DBIT':                     `${BASE}images/companies/csi_dbit_logo.jpeg`,
 };
 
 export default function WorkExperience({ data }) {
