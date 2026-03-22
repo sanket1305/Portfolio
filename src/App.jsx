@@ -35,7 +35,7 @@ export default function App() {
       <Navbar name={personal.name} theme={theme} toggleTheme={toggleTheme} />
 
       <main>
-        <Hero personal={personal} />
+        <Hero personal={personal} leetcode={competitiveProgramming.profiles.find(p => p.platform === 'LeetCode')} />
         <WorkExperience data={workExperience} />
         <Hackathons data={hackathons} />
         <Projects data={projects} />

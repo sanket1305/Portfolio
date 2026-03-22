@@ -20,15 +20,15 @@
   "workExperience": [
     {
       "id": 1,
-      "company": "UFIT \u2014 University of Florida",
+      "company": "UFIT — University of Florida",
       "role": "Agentic AI Intern",
-      "duration": "Jan 2026 \u2013 Present",
+      "duration": "Jan 2026 – Present",
       "location": "Gainesville, FL, USA",
       "description": "Building agentic AI and LLM-powered automation for university-wide campus service workflows.",
       "bullets": [
         "Automated manual campus service workflows using agentic AI and LLM-based agents, reducing repetitive support effort for enterprise systems",
         "Designed and evaluated prompt-driven Python workflows, improving response accuracy and reliability across thousands of student and faculty interactions",
-        "Developed NaviGator AI \u2014 a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%"
+        "Developed NaviGator AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%"
       ],
       "tech": [
         "Python",
@@ -42,7 +42,7 @@
       "id": 2,
       "company": "LTIMindtree",
       "role": "Senior Data Engineer",
-      "duration": "Jul 2021 \u2013 Jul 2024",
+      "duration": "Jul 2021 – Jul 2024",
       "location": "Mumbai, MH, India",
       "description": "Designed and maintained production-grade ETL pipelines and data platforms for a global banking client with 5M+ users.",
       "bullets": [
@@ -70,7 +70,7 @@
       "id": 3,
       "company": "Sequelstring Pvt Ltd",
       "role": "Blockchain Developer Intern",
-      "duration": "Jun 2019 \u2013 Apr 2020",
+      "duration": "Jun 2019 – Apr 2020",
       "location": "Mumbai, MH, India",
       "description": "Built a blockchain-based multi-party contract management system with end-to-end encryption and decentralized storage.",
       "bullets": [
@@ -94,7 +94,7 @@
       "id": 4,
       "company": "CSI-DBIT",
       "role": "Android App Developer Intern",
-      "duration": "Jun 2019 \u2013 Jul 2020",
+      "duration": "Jun 2019 – Jul 2020",
       "location": "Mumbai, MH,India",
       "description": "Built a native Android app to digitize event management and internal operations for the CSI student chapter.",
       "bullets": [
@@ -118,7 +118,7 @@
       "institution": "University of Florida",
       "degree": "Master of Science",
       "field": "Computer Science",
-      "duration": "Aug 2024 \u2013 May 2026",
+      "duration": "Aug 2024 – May 2026",
       "gpa": "3.92 / 4.0",
       "highlights": [
         "Participation in Hacklytics (2026), organized by Georgia Tech",
@@ -130,12 +130,12 @@
       "institution": "University of Mumbai",
       "degree": "Bachelor of Engineering",
       "field": "Information Technology",
-      "duration": "Aug 2017 \u2013 Jun 2021",
+      "duration": "Aug 2017 – Jun 2021",
       "gpa": "3.63 / 4.0",
       "highlights": [
         "1st Prize at Smart India Hackathon (SIH)2020, organized by Ministry of Education, Govt. of India",
-        "Training & Placement Coordinator (2020 \u2013 2021)",
-        "Technical Head of CSI-DBIT (2019 \u2013 2020)"
+        "Training & Placement Coordinator (2020 – 2021)",
+        "Technical Head of CSI-DBIT (2019 – 2020)"
       ]
     }
   ],
@@ -229,7 +229,7 @@
     {
       "id": 1,
       "title": "E-Tendering Platform",
-      "description": "A cost-effective web-based E-Tendering system replacing hardware Digital Signature Certificates with Aadhaar-based OTP verification and DigiLocker integration. Automated bid submission, identity verification, and document archiving \u2014 reducing operational costs by 65%. Won 1st Prize nationally at Smart India Hackathon 2020 against 200,000+ participants.",
+      "description": "A cost-effective web-based E-Tendering system replacing hardware Digital Signature Certificates with Aadhaar-based OTP verification and DigiLocker integration. Automated bid submission, identity verification, and document archiving — reducing operational costs by 65%. Won 1st Prize nationally at Smart India Hackathon 2020 against 200,000+ participants.",
       "tech": [
         "Python",
         "HTML/CSS/JS",
@@ -282,7 +282,7 @@
     {
       "id": 4,
       "title": "Hindi / Hinglish Toxicity Detection",
-      "description": "Fine-tuned XLM-Roberta for multi-label toxicity classification on Hindi social media data with Integrated Gradients (Captum) explainability. Evaluated GPT-4o-mini for zero-shot, few-shot, and chain-of-thought detection on 5K samples \u2014 achieving 85.6% accuracy and 94.9% precision \u2014 alongside a cost-aware framework tracking inference cost ($2.66 for full dataset).",
+      "description": "Fine-tuned XLM-Roberta for multi-label toxicity classification on Hindi social media data with Integrated Gradients (Captum) explainability. Evaluated GPT-4o-mini for zero-shot, few-shot, and chain-of-thought detection on 5K samples — achieving 85.6% accuracy and 94.9% precision — alongside a cost-aware framework tracking inference cost ($2.66 for full dataset).",
       "tech": [
         "Python",
         "XLM-Roberta",
@@ -317,8 +317,8 @@
     },
     {
       "id": 6,
-      "title": "Roam.io \u2014 Travel Management App",
-      "description": "Full-stack travel management application using React.js and PostgreSQL for itinerary planning, attraction discovery, and booking. Features a multi-day itinerary planner with calendar visualization, dynamic SQL-backed search across 1000+ travel records, and Google Sheets API integration for live admin feedback \u2014 improving task completion time by 25% in peer testing.",
+      "title": "Roam.io — Travel Management App",
+      "description": "Full-stack travel management application using React.js and PostgreSQL for itinerary planning, attraction discovery, and booking. Features a multi-day itinerary planner with calendar visualization, dynamic SQL-backed search across 1000+ travel records, and Google Sheets API integration for live admin feedback — improving task completion time by 25% in peer testing.",
       "tech": [
         "React.js",
         "PostgreSQL",
@@ -333,7 +333,7 @@
     },
     {
       "id": 7,
-      "title": "Reddit Engine \u2014 Backend in Go",
+      "title": "Reddit Engine — Backend in Go",
       "description": "Reddit-inspired backend engine in Go implementing posts, voting, messaging, and subreddit management for 10+ simulated users via RESTful APIs. Leveraged goroutines and channel-based IPC for concurrent, race-condition-free handling of real-time votes and nested comment threads. Achieved >95% functional test coverage across all core subsystems.",
       "tech": [
         "Go",
@@ -388,8 +388,8 @@
       "id": 2,
       "event": "Hacklytics 2026",
       "result": "Participant",
-      "project": "APEX \u2014 F1 Strategy & Chaos Simulator",
-      "description": "Built a real-time dual-screen F1 race strategy simulator using a WebSocket architecture. An XGBoost model (R\u00b2 = 0.95, MAE ~0.29s) predicts baseline lap times, feeding a NumPy Monte Carlo engine running 10,000 race simulations in <0.2s. Chaos events like rain and safety cars are injected live via an iPad console, with Gemini LLM formatting results into team radio calls.",
+      "project": "APEX — F1 Strategy & Chaos Simulator",
+      "description": "Built a real-time dual-screen F1 race strategy simulator using a WebSocket architecture. An XGBoost model (R² = 0.95, MAE ~0.29s) predicts baseline lap times, feeding a NumPy Monte Carlo engine running 10,000 race simulations in <0.2s. Chaos events like rain and safety cars are injected live via an iPad console, with Gemini LLM formatting results into team radio calls.",
       "date": "2026",
       "team": 4,
       "image": "images/hackathons/hacklytics_logo.png",
@@ -435,9 +435,9 @@
         "username": "deshmukhsanket",
         "url": "https://leetcode.com/deshmukhsanket",
         "stats": {
-          "easy": 298,
-          "medium": 444,
-          "hard": 78
+          "easy": 306,
+          "medium": 462,
+          "hard": 87
         }
       }
     ],
@@ -448,7 +448,8 @@
         "role": "Senior Data Engineer (DE - II)",
         "year": "2021",
         "package": "",
-        "description": "Earned a Pre-Placement Offer from LTIMindtree through the Infinity Coding Challenge (ICC), a national competition with 100,000+ participants. Successfully cleared all 3 rounds, finishing in the top 0.2% of participants to qualify for the SDE2 PPO."
+        "description": "Earned a Pre-Placement Offer from LTIMindtree through the Infinity Coding Challenge (ICC), a national competition with 100,000+ participants. Successfully cleared all 3 rounds, finishing in the top 0.2% of participants to qualify for the SDE2 PPO.",
+        "competition": "Infinity Coding Challenge (ICC)"
       },
       {
         "id": 2,
@@ -456,7 +457,8 @@
         "role": "Systems Engineer Specialist (SDE - II)",
         "year": "2020",
         "package": "",
-        "description": "Secured a Pre-Placement Offer from Infosys by competing in HackWithInfy 2020, a national-level coding competition with 200,000+ participants. Cleared Round 1 and Round 2, finishing in the top 0.3% of all participants to qualify for the SDE2 PPO."
+        "description": "Secured a Pre-Placement Offer from Infosys by competing in HackWithInfy 2020, a national-level coding competition with 200,000+ participants. Cleared Round 1 and Round 2, finishing in the top 0.3% of all participants to qualify for the SDE2 PPO.",
+        "competition": "HackWithInfy"
       },
       {
         "id": 3,
@@ -464,7 +466,8 @@
         "role": "Software Engineer (SDE - I)",
         "year": "2020",
         "package": "",
-        "description": "Received a Pre-Placement Offer from TCS by qualifying in TCS CodeVita Season 8, one of the world's largest coding competitions with 300,000+ participants. Cleared Round 1, placing in the top 3\u20135% of all participants to secure the SDE1 offer."
+        "description": "Received a Pre-Placement Offer from TCS by qualifying in TCS CodeVita Season 8, one of the world's largest coding competitions with 300,000+ participants. Cleared Round 1, placing in the top 3–5% of all participants to secure the SDE1 offer.",
+        "competition": "CodeVita"
       },
       {
         "id": 4,
@@ -472,7 +475,8 @@
         "role": "Software Engineer (SDE - I)",
         "year": "2020",
         "package": "",
-        "description": "Secured a Pre-Placement Offer from Persistent Systems through Smart India Hackathon (SIH) 2020, a national hackathon with 500,000+ student participants. Competed at the Grand Finale level among 1,500+ teams nationwide, earning an SDE PPO as an industry sponsor selection."
+        "description": "Secured a Pre-Placement Offer from Persistent Systems through Smart India Hackathon (SIH) 2020, a national hackathon with 500,000+ student participants. Competed at the Grand Finale level among 1,500+ teams nationwide, earning an SDE PPO as an industry sponsor selection.",
+        "competition": "Smart India Hackathon (SIH)"
       }
     ]
   },
@@ -495,7 +499,7 @@
     },
     {
       "id": 3,
-      "title": "1st Prize \u2014 Smart India Hackathon 2020",
+      "title": "1st Prize — Smart India Hackathon 2020",
       "organisation": "Ministry of Education, Government of India",
       "year": "2020",
       "description": "Won 1st prize nationally for the E-Tendering problem statement, competing against 200,000+ participants and 33,000+ teams from across India.",

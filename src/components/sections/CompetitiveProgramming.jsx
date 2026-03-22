@@ -1,70 +1,37 @@
-import { ExternalLink, Briefcase, Code2, RefreshCw } from 'lucide-react';
+import { ExternalLink, RefreshCw } from 'lucide-react';
 import { SiLeetcode } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import SectionWrapper from '../ui/SectionWrapper';
 import SectionTitle from '../ui/SectionTitle';
 import { useLeetCodeStats } from '../../hooks/useLeetCodeStats';
 
-import ltimLogo       from '../../assets/ltimindtree_logo.jpeg';
-import infosysLogo    from '../../assets/infosys_logo.jpeg';
-import tcsLogo        from '../../assets/tata_consultancy_services_logo.jpeg';
-import persistentLogo from '../../assets/persistent_systems_logo.jpeg';
+const BASE = import.meta.env.BASE_URL;
 
+/* ── Company logo paths (served from public/) ───────────────── */
 const PPO_LOGOS = {
-  'LTIMindtree':        ltimLogo,
-  'Infosys':            infosysLogo,
-  'TCS':                tcsLogo,
-  'Persistent Systems': persistentLogo,
+  'LTIMindtree':        `${BASE}images/companies/ltimindtree_logo.jpeg`,
+  'Infosys':            `${BASE}images/companies/infosys_logo.jpeg`,
+  'TCS':                `${BASE}images/companies/tata_consultancy_services_logo.jpeg`,
+  'Persistent Systems': `${BASE}images/companies/persistent_systems_logo.jpeg`,
 };
 
-/* ── Per-platform visual config ───────────────────────────── */
-const PLATFORM_CONFIG = {
-  LeetCode: {
-    Icon: SiLeetcode,
-    iconColor:    'text-[#FFA116]',
-    iconBg:       'bg-[#FFA116]/10  dark:bg-[#FFA116]/10',
-    iconBorder:   'border-[#FFA116]/25 dark:border-[#FFA116]/20',
-    cardBorder:   'border-[#FFA116]/20 dark:border-[#FFA116]/15',
-    hoverBorder:  'hover:border-[#FFA116]/55 dark:hover:border-[#FFA116]/45',
-    hoverShadow:  'hover:shadow-[#FFA116]/8',
-  },
-};
-
-const fallbackConfig = {
-  Icon: Code2,
-  iconColor:   'text-cyan-500',
-  iconBg:      'bg-cyan-50      dark:bg-cyan-400/10',
-  iconBorder:  'border-cyan-200 dark:border-cyan-400/20',
-  cardBorder:  'border-gray-200 dark:border-gray-800',
-  hoverBorder: 'hover:border-cyan-500/40',
-  hoverShadow: 'hover:shadow-cyan-500/5',
-};
-
-/* ── Stat pill ─────────────────────────────────────────────── */
+/* ── LeetCode stat pill ─────────────────────────────────────── */
 function StatPill({ label, value, colour }) {
   return (
-    <div className="flex-1 bg-gray-50 dark:bg-gray-800/70 rounded-lg py-2.5 text-center min-w-0">
+    <div className="flex-1 bg-white/10 rounded-lg py-2.5 text-center min-w-0">
       <p className={`font-bold text-base leading-none mb-1 ${colour}`}>{value}</p>
-      <p className="text-[10px] uppercase tracking-wide text-gray-400 dark:text-gray-500">{label}</p>
+      <p className="text-[10px] uppercase tracking-wide text-gray-300/70">{label}</p>
     </div>
   );
 }
 
-/* ── Profile card (fetches live stats) ─────────────────────── */
-function ProfileCard({ profile, index }) {
-  const cfg = PLATFORM_CONFIG[profile.platform] ?? fallbackConfig;
-  const { Icon, iconColor, iconBg, iconBorder, cardBorder, hoverBorder, hoverShadow } = cfg;
-
-  const { stats, loading, error } = useLeetCodeStats(
-    profile.platform === 'LeetCode' ? profile.username : null,
-    profile.stats,
-  );
-
+/* ── LeetCode profile card ──────────────────────────────────── */
+function LeetCodeCard({ profile, index }) {
+  const { stats, loading } = useLeetCodeStats(profile.username, profile.stats);
   const solved = (stats.easy ?? 0) + (stats.medium ?? 0) + (stats.hard ?? 0);
 
   return (
     <motion.a
-      key={profile.id}
       href={profile.url}
       target="_blank"
       rel="noopener noreferrer"
@@ -72,69 +39,136 @@ function ProfileCard({ profile, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.45, delay: index * 0.1 }}
-      className={`
-        group relative flex flex-col
-        bg-gray-50 dark:bg-gray-900
-        border ${cardBorder} ${hoverBorder}
-        rounded-xl p-6
-        hover:shadow-lg ${hoverShadow}
-        transition-all duration-300
-      `}
+      className="group relative overflow-hidden rounded-xl border border-[#FFA116]/20 hover:border-[#FFA116]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#FFA116]/10"
+      style={{ height: '300px' }}
     >
-      {/* Header row */}
-      <div className="flex items-center justify-between mb-5">
-        <div className={`p-2.5 rounded-lg ${iconBg} border ${iconBorder}`}>
-          <Icon size={22} className={iconColor} />
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-[#FFA116]/10" />
+
+      {/* Subtle grid pattern */}
+      <div
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: 'linear-gradient(#FFA116 1px, transparent 1px), linear-gradient(90deg, #FFA116 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+
+      {/* Default face — logo + username + total */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-6 transition-transform duration-300 group-hover:-translate-y-4">
+        <div className="w-16 h-16 rounded-2xl bg-[#FFA116]/15 border border-[#FFA116]/30 flex items-center justify-center">
+          <SiLeetcode size={36} className="text-[#FFA116]" />
         </div>
-        <span className="flex items-center gap-1 text-xs font-medium text-gray-400 dark:text-gray-500 group-hover:text-cyan-500 transition-colors">
-          Visit profile <ExternalLink size={12} />
-        </span>
+        <div className="text-center">
+          <p className="font-bold text-white text-lg">LeetCode</p>
+          <p className="text-sm text-gray-400 font-mono">@{profile.username}</p>
+        </div>
+        {loading ? (
+          <RefreshCw size={16} className="animate-spin text-[#FFA116]/60" />
+        ) : (
+          <p className="text-3xl font-extrabold text-white">{solved}
+            <span className="text-sm font-normal text-gray-400 ml-1">solved</span>
+          </p>
+        )}
       </div>
 
-      {/* Platform + username */}
-      <h3 className="font-bold text-gray-900 dark:text-gray-50 text-base mb-0.5">
-        {profile.platform}
-      </h3>
-      <p className="text-sm text-gray-400 dark:text-gray-500 font-mono mb-5">
-        @{profile.username}
-      </p>
-
-      {/* Total solved badge */}
-      <div className="flex items-center gap-2 mb-4">
+      {/* Hover panel — slides up from bottom with E/M/H breakdown */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gray-950/95 backdrop-blur-sm border-t border-[#FFA116]/20 px-5 py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-350 ease-out">
+        <p className="text-[10px] uppercase tracking-widest text-[#FFA116]/70 font-semibold mb-3">
+          Breakdown
+        </p>
         {loading ? (
-          <RefreshCw size={18} className="animate-spin text-gray-400 dark:text-gray-500" />
+          <div className="flex gap-2">
+            {[1,2,3].map(i => (
+              <div key={i} className="flex-1 bg-white/5 rounded-lg py-2.5 animate-pulse" />
+            ))}
+          </div>
         ) : (
-          <span className="text-2xl font-extrabold text-gray-900 dark:text-gray-50">
-            {solved}
-          </span>
+          <div className="flex gap-2">
+            <StatPill label="Easy"   value={stats.easy}   colour="text-emerald-400" />
+            <StatPill label="Medium" value={stats.medium} colour="text-amber-400"   />
+            <StatPill label="Hard"   value={stats.hard}   colour="text-rose-400"    />
+          </div>
         )}
-        <span className="text-xs text-gray-400 dark:text-gray-500 leading-tight">
-          problems<br />solved
-          {error && <span className="block text-[10px] text-gray-300 dark:text-gray-600">(cached)</span>}
-        </span>
-      </div>
-
-      {/* Easy / Medium / Hard breakdown */}
-      <div className="flex gap-2 mt-auto">
-        {loading ? (
-          <>
-            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
-            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
-            <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-lg py-2.5 animate-pulse" />
-          </>
-        ) : (
-          <>
-            <StatPill label="Easy"   value={stats.easy}   colour="text-emerald-500 dark:text-emerald-400" />
-            <StatPill label="Medium" value={stats.medium} colour="text-amber-500   dark:text-amber-400"   />
-            <StatPill label="Hard"   value={stats.hard}   colour="text-rose-500    dark:text-rose-400"    />
-          </>
-        )}
+        <p className="text-xs text-gray-500 flex items-center justify-end gap-1 mt-3">
+          View profile <ExternalLink size={11} />
+        </p>
       </div>
     </motion.a>
   );
 }
 
-/* ── Main component ────────────────────────────────────────── */
+/* ── PPO offer card ─────────────────────────────────────────── */
+function PPOCard({ ppo, index }) {
+  const logo = PPO_LOGOS[ppo.company];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.45, delay: index * 0.1 }}
+      className="group relative overflow-hidden rounded-xl hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
+      style={{ height: '300px' }}
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-800 to-indigo-900 dark:from-cyan-900 dark:to-indigo-950" />
+
+      {/* Default face — logo + competition + company + role */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 transition-transform duration-300 group-hover:-translate-y-3">
+        {/* Logo */}
+        <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 shadow-md overflow-hidden flex items-center justify-center p-2">
+          {logo ? (
+            <img
+              src={logo}
+              alt={`${ppo.company} logo`}
+              className="w-full h-full object-contain"
+            />
+          ) : (
+            <span className="text-2xl font-black text-white/60">
+              {ppo.company.charAt(0)}
+            </span>
+          )}
+        </div>
+
+        {/* Competition + company + role */}
+        <div className="text-center">
+          {ppo.competition && (
+            <p className="font-bold text-white text-base leading-snug">
+              {ppo.competition}
+            </p>
+          )}
+          <p className="text-xs text-cyan-200 font-semibold mt-0.5 tracking-wide">
+            {ppo.company}
+          </p>
+          <p className="text-xs text-white/70 font-medium mt-0.5">{ppo.role}</p>
+          <span className="inline-block mt-2 text-xs font-mono text-white/60 bg-white/10 border border-white/15 px-2.5 py-0.5 rounded-full">
+            {ppo.year}
+          </span>
+        </div>
+      </div>
+
+      {/* Hint text */}
+      <div className="absolute bottom-3 left-0 right-0 flex justify-center group-hover:opacity-0 transition-opacity duration-200">
+        <p className="text-[10px] text-cyan-200/70 font-medium tracking-wide animate-pulse">
+          Hover to know more →
+        </p>
+      </div>
+
+      {/* Hover panel — slides up from bottom */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 via-slate-900/98 to-cyan-950/95 backdrop-blur-sm border-t border-white/10 px-5 py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+        <p className="text-[10px] uppercase tracking-widest text-cyan-300 font-semibold mb-2">
+          How I got it
+        </p>
+        <p className="text-xs text-white/80 leading-relaxed line-clamp-5">
+          {ppo.description}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
+/* ── Main component ─────────────────────────────────────────── */
 export default function CompetitiveProgramming({ data }) {
   const { profiles = [], ppoOffers = [] } = data;
 
@@ -145,20 +179,19 @@ export default function CompetitiveProgramming({ data }) {
         subtitle="Coding profiles and pre-placement offers"
       />
 
-      {/* ── Coding profiles ── */}
-      {profiles.length > 0 && (
-        <div className="mb-14">
+      {/* ── Coding profiles (shown in Hero section) ── */}
+      {/* {profiles.length > 0 && (
+        <div className="mb-12">
           <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-6">
             Coding Profiles
           </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {profiles.map((profile, i) => (
-              <ProfileCard key={profile.id} profile={profile} index={i} />
+              <LeetCodeCard key={profile.id} profile={profile} index={i} />
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* ── PPO Offers ── */}
       {ppoOffers.length > 0 && (
@@ -166,66 +199,10 @@ export default function CompetitiveProgramming({ data }) {
           <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-6">
             Pre-Placement Offers
           </p>
-
-          <div className="flex flex-col gap-4">
-            {ppoOffers.map((ppo, i) => {
-              const logo = PPO_LOGOS[ppo.company];
-
-              return (
-                <motion.div
-                  key={ppo.id}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="flex items-start gap-4 p-5 md:p-6 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:border-cyan-500/40 transition-all duration-300"
-                >
-                  {/* Company logo or fallback icon */}
-                  {logo ? (
-                    <div className="w-11 h-11 rounded-xl flex-shrink-0 bg-white border border-gray-200 dark:border-gray-700 mt-0.5 overflow-hidden">
-                      <img
-                        src={logo}
-                        alt={`${ppo.company} logo`}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="p-2.5 rounded-lg bg-cyan-50 dark:bg-cyan-400/10 border border-cyan-200 dark:border-cyan-400/20 flex-shrink-0 mt-0.5">
-                      <Briefcase size={20} className="text-cyan-600 dark:text-cyan-400" />
-                    </div>
-                  )}
-
-                  {/* Content */}
-                  <div className="flex-1 min-w-0">
-                    {/* Title row */}
-                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 mb-1">
-                      <h3 className="text-gray-900 dark:text-gray-50 font-bold text-base">
-                        {ppo.role}
-                      </h3>
-
-                      {/* Year badge */}
-                      <span className="text-xs font-mono text-cyan-600 dark:text-cyan-400 bg-cyan-50 dark:bg-cyan-400/10 border border-cyan-200 dark:border-cyan-400/20 px-2 py-0.5 rounded-full">
-                        {ppo.year}
-                      </span>
-
-                      {/* Package badge (optional) */}
-                      {ppo.package && (
-                        <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-400/10 border border-emerald-200 dark:border-emerald-400/20 px-2 py-0.5 rounded-full">
-                          {ppo.package}
-                        </span>
-                      )}
-                    </div>
-
-                    <p className="text-cyan-600/80 dark:text-cyan-400/80 text-sm font-medium mb-1.5">
-                      {ppo.company}
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                      {ppo.description}
-                    </p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ppoOffers.map((ppo, i) => (
+              <PPOCard key={ppo.id} ppo={ppo} index={i} />
+            ))}
           </div>
         </div>
       )}

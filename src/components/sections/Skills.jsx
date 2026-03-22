@@ -131,13 +131,13 @@ export default function Skills({ data }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-5 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/5"
+            className="bg-gradient-to-br from-cyan-800 to-indigo-900 dark:from-cyan-900 dark:to-indigo-950 rounded-xl p-5 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-cyan-600 dark:text-cyan-400 font-mono text-base select-none">
+              <span className="text-cyan-300 font-mono text-base select-none">
                 {categoryIcons[category] ?? '#'}
               </span>
-              <h3 className="text-gray-700 dark:text-gray-200 font-semibold text-sm uppercase tracking-wider">
+              <h3 className="text-white font-semibold text-sm uppercase tracking-wider">
                 {category}
               </h3>
             </div>
@@ -148,7 +148,7 @@ export default function Skills({ data }) {
                 return (
                   <span
                     key={skill}
-                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-cyan-500/50 hover:text-cyan-600 dark:hover:border-cyan-400/40 dark:hover:text-cyan-300 transition-colors duration-200 cursor-default"
+                    className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-white/10 text-white border border-white/15 hover:bg-white/20 hover:border-white/30 transition-colors duration-200 cursor-default"
                   >
                     <Icon className="shrink-0" size={13} />
                     {skill}

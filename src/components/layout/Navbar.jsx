@@ -3,10 +3,10 @@ import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Experience', href: '#experience' },
-  { label: 'Education', href: '#education' },
-  { label: 'Skills', href: '#skills' },
+  { label: 'Hackathons', href: '#hackathons' },  
   { label: 'Projects', href: '#projects' },
-  { label: 'Hackathons', href: '#hackathons' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Education', href: '#education' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Awards', href: '#awards' },
   { label: 'Competitive', href: '#competitive' },
@@ -89,9 +89,11 @@ export default function Navbar({ name, theme, toggleTheme }) {
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="ml-2 p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="ml-2 p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === 'dark'
+                ? <Sun size={18} className="text-yellow-400 hover:text-yellow-300" />
+                : <Moon size={18} className="text-gray-500 hover:text-gray-900" fill="currentColor" />}
             </button>
           </div>
 
@@ -100,9 +102,11 @@ export default function Navbar({ name, theme, toggleTheme }) {
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
             >
-              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === 'dark'
+                ? <Sun size={18} className="text-yellow-400 hover:text-yellow-300" />
+                : <Moon size={18} className="text-gray-500 hover:text-gray-900" fill="currentColor" />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
