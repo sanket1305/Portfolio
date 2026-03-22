@@ -37,10 +37,10 @@ export default function App() {
       <main>
         <Hero personal={personal} />
         <WorkExperience data={workExperience} />
-        <Education data={education} />
-        <Skills data={skills} />
-        <Projects data={projects} />
         <Hackathons data={hackathons} />
+        <Projects data={projects} />
+        <Skills data={skills} />
+        <Education data={education} />
         <Certifications data={certifications} />
         <Awards data={awards} />
         <CompetitiveProgramming data={competitiveProgramming} />

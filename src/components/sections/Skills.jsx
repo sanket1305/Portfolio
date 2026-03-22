@@ -1,63 +1,119 @@
 import { motion } from 'framer-motion';
 import {
-  SiJavascript, SiTypescript, SiPython, SiGo, SiGnubash,
-  SiReact, SiNextdotjs, SiTailwindcss, SiFramer, SiRedux,
-  SiNodedotjs, SiExpress, SiFastapi, SiGraphql,
-  SiPostgresql, SiMongodb, SiRedis, SiMysql, SiElasticsearch,
-  SiAmazonwebservices, SiGooglecloud, SiDocker, SiKubernetes, SiGithubactions, SiTerraform,
-  SiGit, SiPostman, SiFigma, SiJira, SiLinear,
+  SiPython, SiGo, SiJavascript, SiCplusplus,
+  SiLangchain, SiN8N,
+  SiPytorch, SiScikitlearn, SiHuggingface,
+  SiApachespark, SiApachekafka, SiApacheairflow, SiDbt, SiApachehive, SiApachehadoop,
+  SiPostgresql, SiMysql, SiMongodb, SiSnowflake, SiSqlite, SiFirebase,
+  SiAmazonwebservices, SiGooglecloud,
+  SiSpringboot, SiReact, SiNodedotjs, SiDjango, SiAngular,
+  SiPandas, SiNumpy, SiPlotly, SiStreamlit, SiWeb3Dotjs,
+  SiTableau,
+  SiGit, SiDocker, SiLinux, SiJenkins, SiJira, SiPostman, SiBitbucket, SiApachemaven,
 } from 'react-icons/si';
-import { VscVscode } from 'react-icons/vsc';
+import { FaJava, FaDatabase, FaProjectDiagram, FaCode } from 'react-icons/fa';
+import { TbBrandAzure, TbSql, TbBrain, TbNetwork, TbCpu, TbChartHistogram, TbGitBranch } from 'react-icons/tb';
 import SectionWrapper from '../ui/SectionWrapper';
 import SectionTitle from '../ui/SectionTitle';
 
+// Fallback icon shown when no specific icon is found (also used for conceptual skills)
+const DEFAULT_ICON = FaCode;
+
 const categoryIcons = {
-  Languages: '{ }',
-  Frontend: '⬡',
-  Backend: '⚙',
-  Databases: '◈',
-  'DevOps & Cloud': '☁',
-  Tools: '⚒',
+  'Languages':             '{ }',
+  'Agentic AI':            '⬡',
+  'AI / ML':               '◈',
+  'Data Engineering':      '⚙',
+  'Databases & Cloud':     '☁',
+  'Frameworks & Libraries':'⚒',
+  'Data Visualization':    '▣',
+  'DevOps & Tools':        '⛭',
 };
 
 const skillIcons = {
   // Languages
-  'JavaScript': SiJavascript,
-  'TypeScript': SiTypescript,
-  'Python': SiPython,
-  'Go': SiGo,
-  'Bash': SiGnubash,
-  // Frontend
-  'React': SiReact,
-  'Next.js': SiNextdotjs,
-  'Tailwind CSS': SiTailwindcss,
-  'Framer Motion': SiFramer,
-  'Redux': SiRedux,
-  // Backend
-  'Node.js': SiNodedotjs,
-  'Express': SiExpress,
-  'FastAPI': SiFastapi,
-  'GraphQL': SiGraphql,
-  // Databases
-  'PostgreSQL': SiPostgresql,
-  'MongoDB': SiMongodb,
-  'Redis': SiRedis,
-  'MySQL': SiMysql,
-  'Elasticsearch': SiElasticsearch,
-  // DevOps & Cloud
-  'AWS': SiAmazonwebservices,
-  'GCP': SiGooglecloud,
-  'Docker': SiDocker,
-  'Kubernetes': SiKubernetes,
-  'GitHub Actions': SiGithubactions,
-  'Terraform': SiTerraform,
-  // Tools
-  'Git': SiGit,
-  'Postman': SiPostman,
-  'Figma': SiFigma,
-  'Jira': SiJira,
-  'Linear': SiLinear,
-  'VSCode': VscVscode,
+  'Python':       SiPython,
+  'Java':         FaJava,
+  'Go':           SiGo,
+  'JavaScript':   SiJavascript,
+  'C/C++':        SiCplusplus,
+  'SQL':          TbSql,
+
+  // Agentic AI
+  'LangChain':                  SiLangchain,
+  'LangGraph':                  TbNetwork,
+  'Model Context Protocol (MCP)': TbCpu,
+  'Agent-to-Agent (A2A)':       TbNetwork,
+  'Google ADK':                 TbCpu,
+  'RAG Pipelines':              FaProjectDiagram,
+  'Prompt Engineering':         FaCode,
+  'LLM Fine-tuning':            TbBrain,
+  'n8n':                        SiN8N,
+  'Langflow':                   FaProjectDiagram,
+  'LLM Orchestration':          TbBrain,
+
+  // AI / ML
+  'PyTorch':             SiPytorch,
+  'Scikit-learn':        SiScikitlearn,
+  'XGBoost':             TbChartHistogram,
+  'Random Forest':       TbChartHistogram,
+  'HDBSCAN':             TbChartHistogram,
+  'LoRA Fine-Tuning':    TbBrain,
+  'Sentence Transformers': TbBrain,
+  'XLM-Roberta':         TbBrain,
+  'HuggingFace':         SiHuggingface,
+  'VADER':               TbBrain,
+  'FAISS':               FaDatabase,
+
+  // Data Engineering
+  'Apache Spark':       SiApachespark,
+  'Apache Kafka':       SiApachekafka,
+  'Apache Airflow':     SiApacheairflow,
+  'dbt':                SiDbt,
+  'Hive':               SiApachehive,
+  'HDFS':               SiApachehadoop,
+  'Sqoop':              FaDatabase,
+  'ETL Pipelines':      FaProjectDiagram,
+  'Distributed Systems': TbNetwork,
+
+  // Databases & Cloud
+  'PostgreSQL':             SiPostgresql,
+  'MySQL':                  SiMysql,
+  'MongoDB':                SiMongodb,
+  'Snowflake':              SiSnowflake,
+  'SQLite':                 SiSqlite,
+  'Firebase':               SiFirebase,
+  'AWS (S3, Glue, Lambda)': SiAmazonwebservices,
+  'GCP':                    SiGooglecloud,
+  'Azure':                  TbBrandAzure,
+
+  // Frameworks & Libraries
+  'Spring Boot': SiSpringboot,
+  'React.js':    SiReact,
+  'Node.js':     SiNodedotjs,
+  'Django':      SiDjango,
+  'AngularJS':   SiAngular,
+  'Pandas':      SiPandas,
+  'NumPy':       SiNumpy,
+  'Plotly':      SiPlotly,
+  'Streamlit':   SiStreamlit,
+  'Web3.js':     SiWeb3Dotjs,
+
+  // Data Visualization
+  'Tableau':    SiTableau,
+  'Power BI':   TbChartHistogram,
+  'Matplotlib': TbChartHistogram,
+
+  // DevOps & Tools
+  'Git':            SiGit,
+  'Docker':         SiDocker,
+  'Linux':          SiLinux,
+  'Jenkins':        SiJenkins,
+  'CI/CD Pipelines': TbGitBranch,
+  'Jira':           SiJira,
+  'Postman':        SiPostman,
+  'Bitbucket':      SiBitbucket,
+  'Maven':          SiApachemaven,
 };
 
 export default function Skills({ data }) {
@@ -87,13 +143,14 @@ export default function Skills({ data }) {
             </div>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => {
-                const Icon = skillIcons[skill];
+                // Use specific icon → semantic generic → DEFAULT_ICON as final fallback
+                const Icon = skillIcons[skill] ?? DEFAULT_ICON;
                 return (
                   <span
                     key={skill}
                     className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700/60 hover:border-cyan-500/50 hover:text-cyan-600 dark:hover:border-cyan-400/40 dark:hover:text-cyan-300 transition-colors duration-200 cursor-default"
                   >
-                    {Icon && <Icon className="shrink-0" size={13} />}
+                    <Icon className="shrink-0" size={13} />
                     {skill}
                   </span>
                 );

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00205B;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#0033A0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003DA5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00A3E0;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00205B;stop-opacity:0" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="75" x2="800" y2="75"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="100" y1="0" x2="100" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="450"/>
+    <line x1="300" y1="0" x2="300" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/>
+    <line x1="500" y1="0" x2="500" y2="450"/>
+    <line x1="600" y1="0" x2="600" y2="450"/>
+    <line x1="700" y1="0" x2="700" y2="450"/>
+  </g>
+
+  <!-- Glow circle top right -->
+  <circle cx="650" cy="80" r="180" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="100" cy="380" r="140" fill="#00A3E0" fill-opacity="0.08" filter="url(#blur)"/>
+
+  <!-- Nordea star/compass icon (simplified) -->
+  <g transform="translate(400,160)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="72" fill="none" stroke="#00A3E0" stroke-width="2" stroke-opacity="0.6"/>
+    <!-- Star shape (4-point) -->
+    <path d="M0,-60 L12,-12 L60,0 L12,12 L0,60 L-12,12 L-60,0 L-12,-12 Z"
+          fill="#00A3E0" fill-opacity="0.9"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="16" fill="#ffffff" fill-opacity="0.95"/>
+  </g>
+
+  <!-- NORDEA wordmark -->
+  <text x="400" y="268" font-family="Georgia, serif" font-size="38" font-weight="bold"
+        fill="#ffffff" text-anchor="middle" letter-spacing="8">NORDEA</text>
+
+  <!-- Award label -->
+  <text x="400" y="308" font-family="Arial, sans-serif" font-size="13"
+        fill="#00A3E0" text-anchor="middle" letter-spacing="3" text-transform="uppercase">TECHNICAL IMPROVEMENT</text>
+
+  <!-- Bottom accent line -->
+  <rect x="320" y="328" width="160" height="2" rx="1" fill="#00A3E0" fill-opacity="0.7"/>
+
+  <!-- Trophy icon at bottom -->
+  <text x="400" y="380" font-family="Arial" font-size="28" text-anchor="middle" fill="#FFD700" fill-opacity="0.85">🏆</text>
+</svg>
