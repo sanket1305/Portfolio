@@ -7,6 +7,7 @@ const BASE = import.meta.env.BASE_URL;
 
 const COMPANY_LOGOS = {
   'UFIT — University of Florida': `${BASE}images/companies/uf_information_technology_logo.jpeg`,
+  'University of Florida':        `${BASE}images/companies/university_of_florida_logo.jpeg`,
   'LTIMindtree':                  `${BASE}images/companies/ltimindtree_logo.jpeg`,
   'Sequelstring Pvt Ltd':         `${BASE}images/companies/sequelstring_solutions_and_consultancy_pvt_ltd_logo.jpeg`,
   'CSI-DBIT':                     `${BASE}images/companies/csi_dbit_logo.jpeg`,

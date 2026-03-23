@@ -155,12 +155,12 @@ function PPOCard({ ppo, index }) {
         </p>
       </div>
 
-      {/* Hover panel — slides up from bottom */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900 via-slate-900/98 to-cyan-950/95 backdrop-blur-sm border-t border-white/10 px-5 py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+      {/* Hover panel — slides up ~75% of card */}
+      <div className="absolute bottom-0 left-0 right-0 h-[75%] bg-gradient-to-t from-slate-900 via-slate-900/98 to-cyan-950/95 backdrop-blur-sm border-t border-white/10 px-5 py-4 flex flex-col translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
         <p className="text-[10px] uppercase tracking-widest text-cyan-300 font-semibold mb-2">
           How I got it
         </p>
-        <p className="text-xs text-white/80 leading-relaxed line-clamp-5">
+        <p className="text-xs text-white/80 leading-relaxed overflow-auto">
           {ppo.description}
         </p>
       </div>
