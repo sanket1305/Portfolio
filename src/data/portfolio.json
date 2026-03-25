@@ -28,7 +28,7 @@
       "bullets": [
         "Automated manual campus service workflows using agentic AI and LLM-based agents, reducing repetitive support effort for enterprise systems",
         "Designed and evaluated prompt-driven Python workflows, improving response accuracy and reliability across thousands of student and faculty interactions.",
-        "Developed NaviGator AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%."
+        "Developed NaviGatorPrompt AI — a reusable prompt library fine-tuned on institutional datasets, accelerating deployment of new AI use cases by 30%."
       ],
       "tech": [
         "Python",
