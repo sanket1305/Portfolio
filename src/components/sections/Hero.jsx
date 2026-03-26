@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { ArrowDown, Github, Linkedin, Mail, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ResumeModal from '../ui/ResumeModal';
+import { useLeetCodeStats } from '../../hooks/useLeetCodeStats';
 
 const avatarImg = `${import.meta.env.BASE_URL}images/profile/Sanket.png`;
 
@@ -47,9 +48,10 @@ function HexagonAvatar({ leetcode }) {
   }, [goToLeetCode]);
 
   const lc = leetcode ?? {};
-  const easy   = lc.stats?.easy   ?? 0;
-  const medium = lc.stats?.medium ?? 0;
-  const hard   = lc.stats?.hard   ?? 0;
+  const { stats } = useLeetCodeStats(lc.username, lc.stats ?? { easy: 0, medium: 0, hard: 0 });
+  const easy   = stats.easy   ?? 0;
+  const medium = stats.medium ?? 0;
+  const hard   = stats.hard   ?? 0;
   const total  = easy + medium + hard;
   const username = lc.username ?? '';
   const url      = lc.url      ?? '#';
