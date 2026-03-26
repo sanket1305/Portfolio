@@ -25,7 +25,7 @@ export function useLeetCodeStats(username, fallbackStats) {
       try {
         // BASE_URL = '/Portfolio/' on GitHub Pages, '/' in local dev
         const url = `${import.meta.env.BASE_URL}leetcode-stats.json`;
-        const res = await fetch(url);
+        const res = await fetch(url, { cache: 'no-cache' });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
 
